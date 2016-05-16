@@ -104,12 +104,14 @@
 <ul>
 <li>运行gulp</li>
 </ul>
+<hr>
+
 <p>gulpfile.js:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">var gulp = require(&apos;gulp&apos;);</span><br><span class="line">var concat = require(&apos;gulp-concat&apos;);</span><br><span class="line">var jsmin = require(&apos;gulp-jsmin&apos;);</span><br><span class="line">var cssmin = require(&apos;gulp-cssmin&apos;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">gulp.task(&apos;default&apos;, function() &#123;//可以有三个参数，[]</span><br><span class="line">  // 将你的默认的任务代码放在这</span><br><span class="line">  console.log(&apos;哈哈&apos;)</span><br><span class="line">&#125;);</span><br><span class="line">gulp.task(&apos;hebing&apos;, function() &#123;//合并js文件</span><br><span class="line">  </span><br><span class="line">  gulp.src(&apos;js/*.js&apos;)//进入js文件夹，*（通配符）所有的后缀为js的文件</span><br><span class="line">  .pipe(concat(&apos;c.js&apos;))//创建新德js，未定义，默认给你生成new.js</span><br><span class="line">  .pipe(gulp.dest(&apos;js/&apos;))//生成的new.js文件放在js文件里面</span><br><span class="line">&#125;);</span><br><span class="line">gulp.task(&apos;yashuo&apos;,function()&#123;压缩js文件</span><br><span class="line">	gulp.src(&apos;js/c.js&apos;)//找到js文件</span><br><span class="line">	.pipe(jsmin())//js文件的名称</span><br><span class="line">	.pipe(gulp.dest(&apos;js/&apos;))//压缩js文件放在的地方</span><br><span class="line">	</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/05/16/自动化工具/" data-id="cio9xidb30004cyjz70vnxc6c" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/05/16/自动化工具/" data-id="cio9xmamp0007dljzrz76zo5x" class="article-share-link">Share</a>
       
       
     </footer>
@@ -147,7 +149,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/05/13/CSS3在不知道图片具体值，实现居中/" data-id="cio9xidam0001cyjzo27vpd05" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/05/13/CSS3在不知道图片具体值，实现居中/" data-id="cio9xmam90000dljzaax26dr8" class="article-share-link">Share</a>
       
       
     </footer>
@@ -184,7 +186,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/05/12/我的博客（一）/" data-id="cio9xidax0002cyjzqk8i5g1i" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/05/12/我的博客（一）/" data-id="cio9xmamk0004dljzamszo6ri" class="article-share-link">Share</a>
       
       
     </footer>
@@ -306,7 +308,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/05/12/Git常用命令/" data-id="cio9xidbi0005cyjzuaufxcwd" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/05/12/Git常用命令/" data-id="cio9xmame0001dljzdjd308n3" class="article-share-link">Share</a>
       
       
     </footer>
@@ -343,7 +345,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/05/12/伪元素/" data-id="cio9xidag0000cyjz6g739su3" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/05/12/伪元素/" data-id="cio9xmamh0002dljz1y0bwuf5" class="article-share-link">Share</a>
       
       
     </footer>
@@ -453,7 +455,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/05/12/创建GitHub技术博客攻略/" data-id="cio9xidbu0006cyjzx96qi0k2" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/05/12/创建GitHub技术博客攻略/" data-id="cio9xmamj0003dljzqydfwzml" class="article-share-link">Share</a>
       
       
     </footer>
@@ -491,7 +493,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/05/12/火星文/" data-id="cio9xidbw0007cyjzygrpqlgh" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/05/12/火星文/" data-id="cio9xmamn0006dljzki5j7slu" class="article-share-link">Share</a>
       
       
     </footer>
@@ -547,7 +549,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/05/11/我的博客（一）git常用命令/" data-id="cio9xidb00003cyjzfe4r2dow" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/05/11/我的博客（一）git常用命令/" data-id="cio9xmamm0005dljzzjtbv4v0" class="article-share-link">Share</a>
       
       
     </footer>
