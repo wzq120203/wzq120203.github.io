@@ -11,11 +11,9 @@
 
 作为项目的开发依赖（devDependencies）安装：npm install –save-dev gulp
 引入其他插件npm install –save-dev gulp-插件名称（已知less/jsmin/cssmin）
+例如：npm install gulp-jade –save-dev
 
-在项目根目录下创建一个名为 gulpfile.js 的文件：
-
-
-123">
+在">
 <meta property="og:type" content="article">
 <meta property="og:title" content="自动化工具步骤">
 <meta property="og:url" content="http://yoursite.com/2016/05/16/自动化工具/index.html">
@@ -26,12 +24,10 @@
 
 作为项目的开发依赖（devDependencies）安装：npm install –save-dev gulp
 引入其他插件npm install –save-dev gulp-插件名称（已知less/jsmin/cssmin）
+例如：npm install gulp-jade –save-dev
 
-在项目根目录下创建一个名为 gulpfile.js 的文件：
-
-
-123">
-<meta property="og:updated_time" content="2016-05-16T11:37:44.000Z">
+在">
+<meta property="og:updated_time" content="2016-05-17T01:50:59.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="自动化工具步骤">
 <meta name="twitter:description" content="初始化: npm init
@@ -40,11 +36,9 @@
 
 作为项目的开发依赖（devDependencies）安装：npm install –save-dev gulp
 引入其他插件npm install –save-dev gulp-插件名称（已知less/jsmin/cssmin）
+例如：npm install gulp-jade –save-dev
 
-在项目根目录下创建一个名为 gulpfile.js 的文件：
-
-
-123">
+在">
   
     <link rel="alternate" href="/atom.xml" title="当你坚持不住的时候，再坚持一下" type="application/atom+xml">
   
@@ -126,6 +120,7 @@
 </li>
 <li><p>作为项目的开发依赖（devDependencies）安装：npm install –save-dev gulp</p>
 <p>引入其他插件npm install –save-dev gulp-插件名称（已知less/jsmin/cssmin）</p>
+<p>例如：npm install gulp-jade –save-dev</p>
 </li>
 <li><p>在项目根目录下创建一个名为 gulpfile.js 的文件：</p>
 </li>
@@ -134,15 +129,17 @@
 <ul>
 <li>运行gulp</li>
 </ul>
-<hr>
-
-<p>gulpfile.js:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">var gulp = require(&apos;gulp&apos;);</span><br><span class="line">var concat = require(&apos;gulp-concat&apos;);</span><br><span class="line">var jsmin = require(&apos;gulp-jsmin&apos;);</span><br><span class="line">var cssmin = require(&apos;gulp-cssmin&apos;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">gulp.task(&apos;default&apos;, function() &#123;//可以有三个参数，[]</span><br><span class="line">  // 将你的默认的任务代码放在这</span><br><span class="line">  console.log(&apos;哈哈&apos;)</span><br><span class="line">&#125;);</span><br><span class="line">gulp.task(&apos;hebing&apos;, function() &#123;//合并js文件</span><br><span class="line">  </span><br><span class="line">  gulp.src(&apos;js/*.js&apos;)//进入js文件夹，*（通配符）所有的后缀为js的文件</span><br><span class="line">  .pipe(concat(&apos;c.js&apos;))//创建新德js，未定义，默认给你生成new.js</span><br><span class="line">  .pipe(gulp.dest(&apos;js/&apos;))//生成的new.js文件放在js文件里面</span><br><span class="line">&#125;);</span><br><span class="line">gulp.task(&apos;yashuo&apos;,function()&#123;压缩js文件</span><br><span class="line">	gulp.src(&apos;js/c.js&apos;)//找到js文件</span><br><span class="line">	.pipe(jsmin())//js文件的名称</span><br><span class="line">	.pipe(gulp.dest(&apos;js/&apos;))//压缩js文件放在的地方</span><br><span class="line">	</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p><hr><br>``<br>gulpfile.js文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">gulpfile.js:</span><br></pre></td></tr></table></figure></p>
+<p>var gulp = require(‘gulp’);<br>var concat = require(‘gulp-concat’);<br>var jsmin = require(‘gulp-jsmin’);<br>var cssmin = require(‘gulp-cssmin’);</p>
+<p>gulp.task(‘default’, function() {//可以有三个参数，[]<br>  // 将你的默认的任务代码放在这<br>  console.log(‘哈哈’)<br>});<br>gulp.task(‘hebing’, function() {//合并js文件</p>
+<p>  gulp.src(‘js/<em>.js’)//进入js文件夹，</em>（通配符）所有的后缀为js的文件<br>  .pipe(concat(‘c.js’))//创建新德js，未定义，默认给你生成new.js<br>  .pipe(gulp.dest(‘js/‘))//生成的new.js文件放在js文件里面<br>});<br>gulp.task(‘yashuo’,function(){压缩js文件<br>    gulp.src(‘js/c.js’)//找到js文件<br>    .pipe(jsmin())//js文件的名称<br>    .pipe(gulp.dest(‘js/‘))//压缩js文件放在的地方</p>
+<p>});</p>
+<p>```</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/05/16/自动化工具/" data-id="cio9xs6qz0007dzjzryixr9ly" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/05/16/自动化工具/" data-id="ciob5xrlm0007yajzf88cuwac" class="article-share-link">Share</a>
       
       
     </footer>
