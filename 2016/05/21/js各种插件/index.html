@@ -7,7 +7,7 @@
 
     
 
-    <title>myblog</title>
+    <title>js各种插件 | myblog</title>
     <meta name="author" content="吴兆强">
     
     <meta name="description" content="坑">
@@ -15,7 +15,7 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    
+    <meta property="og:title" content="js各种插件"/>
     <meta property="og:site_name" content="当你坚持不住的时候，再坚持一下"/>
 
     
@@ -192,312 +192,96 @@
 
 
     <main>
+        <div class="container main-container">
+    <nav class="page-nav hide-on-small-only">
+    <div class="nav-wrapper indigo">
+        <span class="breadcrumb">Current page(Categories)</span>
+        
+            
+
         
 
-<div class="slider">
-    <ul class="slides">
-    
-       <li>
-           <a href="/">
-               <img class="slider-image" src="http://lorempixel.com/580/250/nature/1">
-               <div class="caption center-align">
-                 <h4>This is our big Tagline!</h3>
-                 <h5 class="light grey-text text-lighten-3">Here&#39;s our small slogan.</h5>
-               </div>
-           </a>
-       </li>
-    
-       <li>
-           <a href="javascript:;">
-               <img class="slider-image" src="http://lorempixel.com/580/250/nature/2">
-               <div class="caption left-align">
-                 <h4>Left Aligned Caption</h3>
-                 <h5 class="light grey-text text-lighten-3">Here&#39;s our small slogan.</h5>
-               </div>
-           </a>
-       </li>
-    
-       <li>
-           <a href="javascript:;">
-               <img class="slider-image" src="http://lorempixel.com/580/250/nature/3">
-               <div class="caption right-align">
-                 <h4>Right Aligned Caption</h3>
-                 <h5 class="light grey-text text-lighten-3">Here&#39;s our small slogan.</h5>
-               </div>
-           </a>
-       </li>
-    
-   </ul>
- </div>
+        
+    </div>
+</nav>
 
+<article>
+    <div class="card">
+        <div class="card-content">
+            
 
-
-<div id="article-list" class="container main-container">
-    
-        <article class="simple-article">
-        <div class="card">
-            <div class="card-content">
-                <div class="article-title">
-                    
-    
-        <h1 class="indigo-link-context"><a href="/2016/05/23/前端程序员经常忽视的一个JavaScript面试题/">前端程序员经常忽视的一个JavaScript面试题</a></h1>
-    
-
-
-                </div>
-
-                <time class="pink-link-context" datetime="2016-05-23T08:31:34.000Z"><a href="/2016/05/23/前端程序员经常忽视的一个JavaScript面试题/">2016-05-23</a></time>
-
+            <div class="article-title">
                 
+    
+        <h1>js各种插件</h1>
+    
 
 
-                
             </div>
+            <time class="pink-link-context" datetime="2016-05-21T09:54:35.000Z"><a href="/2016/05/21/js各种插件/">2016-05-21</a></time>
 
             
+
+            <div class="toc pink-link-context hide-on-med-and-down">
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-4"><a class="section table-of-contents-link" href="#jQuery轻量级响应式图片轮播插件ResponsiveSlides-js-仅1kb"><span class="section table-of-contents-text">jQuery轻量级响应式图片轮播插件ResponsiveSlides.js(仅1kb)</span></a></li></ol>
+</div>
+
+
+            <div class="entry pink-link-context">
+                <h4 id="jQuery轻量级响应式图片轮播插件ResponsiveSlides-js-仅1kb"><a href="#jQuery轻量级响应式图片轮播插件ResponsiveSlides-js-仅1kb" class="headerlink" title="jQuery轻量级响应式图片轮播插件ResponsiveSlides.js(仅1kb)"></a>jQuery轻量级响应式图片轮播插件ResponsiveSlides.js(仅1kb)</h4><p>ResponsiveSlides.js是一个展示同一容器内图片的轻量级响应式jQuery幻灯片插件(tiny responsive slideshow jQuery plugin)。它支持包括IE6在内的几乎所有的浏览器，在IE6中还支持最大宽度属性，但在其它浏览器中并不原生支持。你需要做的只是链接jquery并且把图片裁剪为相同大小。<br>特点：</p>
+<p>1.文件较小(通过缩减和gz压缩只有792字节)</p>
+<p>2.功能简单(ResponsiveSlides.js只支持三种模式：图片自动淡出淡入和使用页码标签，或者左右来手动切换图片。)</p>
+<p>浏览器支持：</p>
+<p>Internet Explorer 6,7,8,9</p>
+<p>Firefox 3,6,8,11</p>
+<p>Safari 5,5.1</p>
+<p>Chrome 15,20</p>
+<p>Opera 11,11.6<br>iOS Safari</p>
+<p>Symbian 3 Webkit</p>
+<p>Opera Mobile 10.1</p>
+<p>Opera Mini for iOS</p>
+<p>IE7, IE9 Mobile</p>
+<p>Firefox Mobile</p>
+<p>Android 2.3+</p>
+<p>Kindle browser</p>
+<pre><code>&lt;script src=&quot;responsiveslides.min.js&quot;&gt;&lt;/script&gt;
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">/*! http://responsiveslides.com v1.54 by @viljamis */</span><br><span class="line">(function(c,I,B)&#123;c.fn.responsiveSlides=function(l)&#123;var a=c.extend(&#123;auto:!0,speed:500,timeout:4E3,pager:!1,nav:!1,random:!1,pause:!1,pauseControls:!0,prevText:&quot;Previous&quot;,nextText:&quot;Next&quot;,maxwidth:&quot;&quot;,navContainer:&quot;&quot;,manualControls:&quot;&quot;,namespace:&quot;rslides&quot;,before:c.noop,after:c.noop&#125;,l);return this.each(function()&#123;B++;var f=c(this),s,r,t,m,p,q,n=0,e=f.children(),C=e.size(),h=parseFloat(a.speed),D=parseFloat(a.timeout),u=parseFloat(a.maxwidth),g=a.namespace,d=g+B,E=g+&quot;_nav &quot;+d+&quot;_nav&quot;,v=g+&quot;_here&quot;,j=d+&quot;_on&quot;,</span><br><span class="line">w=d+&quot;_s&quot;,k=c(&quot;&lt;ul class=&apos;&quot;+g+&quot;_tabs &quot;+d+&quot;_tabs&apos; /&gt;&quot;),x=&#123;&quot;float&quot;:&quot;left&quot;,position:&quot;relative&quot;,opacity:1,zIndex:2&#125;,y=&#123;&quot;float&quot;:&quot;none&quot;,position:&quot;absolute&quot;,opacity:0,zIndex:1&#125;,F=function()&#123;var b=(document.body||document.documentElement).style,a=&quot;transition&quot;;if(&quot;string&quot;===typeof b[a])return!0;s=[&quot;Moz&quot;,&quot;Webkit&quot;,&quot;Khtml&quot;,&quot;O&quot;,&quot;ms&quot;];var a=a.charAt(0).toUpperCase()+a.substr(1),c;for(c=0;c&lt;s.length;c++)if(&quot;string&quot;===typeof b[s[c]+a])return!0;return!1&#125;(),z=function(b)&#123;a.before(b);F?(e.removeClass(j).css(y).eq(b).addClass(j).css(x),</span><br><span class="line">n=b,setTimeout(function()&#123;a.after(b)&#125;,h)):e.stop().fadeOut(h,function()&#123;c(this).removeClass(j).css(y).css(&quot;opacity&quot;,1)&#125;).eq(b).fadeIn(h,function()&#123;c(this).addClass(j).css(x);a.after(b);n=b&#125;)&#125;;a.random&amp;&amp;(e.sort(function()&#123;return Math.round(Math.random())-0.5&#125;),f.empty().append(e));e.each(function(a)&#123;this.id=w+a&#125;);f.addClass(g+&quot; &quot;+d);l&amp;&amp;l.maxwidth&amp;&amp;f.css(&quot;max-width&quot;,u);e.hide().css(y).eq(0).addClass(j).css(x).show();F&amp;&amp;e.show().css(&#123;&quot;-webkit-transition&quot;:&quot;opacity &quot;+h+&quot;ms ease-in-out&quot;,&quot;-moz-transition&quot;:&quot;opacity &quot;+</span><br><span class="line">h+&quot;ms ease-in-out&quot;,&quot;-o-transition&quot;:&quot;opacity &quot;+h+&quot;ms ease-in-out&quot;,transition:&quot;opacity &quot;+h+&quot;ms ease-in-out&quot;&#125;);if(1&lt;e.size())&#123;if(D&lt;h+100)return;if(a.pager&amp;&amp;!a.manualControls)&#123;var A=[];e.each(function(a)&#123;a+=1;A+=&quot;&lt;li&gt;&lt;a href=&apos;#&apos; class=&apos;&quot;+w+a+&quot;&apos;&gt;&quot;+a+&quot;&lt;/a&gt;&lt;/li&gt;&quot;&#125;);k.append(A);l.navContainer?c(a.navContainer).append(k):f.after(k)&#125;a.manualControls&amp;&amp;(k=c(a.manualControls),k.addClass(g+&quot;_tabs &quot;+d+&quot;_tabs&quot;));(a.pager||a.manualControls)&amp;&amp;k.find(&quot;li&quot;).each(function(a)&#123;c(this).addClass(w+(a+1))&#125;);if(a.pager||a.manualControls)q=</span><br><span class="line">k.find(&quot;a&quot;),r=function(a)&#123;q.closest(&quot;li&quot;).removeClass(v).eq(a).addClass(v)&#125;;a.auto&amp;&amp;(t=function()&#123;p=setInterval(function()&#123;e.stop(!0,!0);var b=n+1&lt;C?n+1:0;(a.pager||a.manualControls)&amp;&amp;r(b);z(b)&#125;,D)&#125;,t());m=function()&#123;a.auto&amp;&amp;(clearInterval(p),t())&#125;;a.pause&amp;&amp;f.hover(function()&#123;clearInterval(p)&#125;,function()&#123;m()&#125;);if(a.pager||a.manualControls)q.bind(&quot;click&quot;,function(b)&#123;b.preventDefault();a.pauseControls||m();b=q.index(this);n===b||c(&quot;.&quot;+j).queue(&quot;fx&quot;).length||(r(b),z(b))&#125;).eq(0).closest(&quot;li&quot;).addClass(v),</span><br><span class="line">a.pauseControls&amp;&amp;q.hover(function()&#123;clearInterval(p)&#125;,function()&#123;m()&#125;);if(a.nav)&#123;g=&quot;&lt;a href=&apos;#&apos; class=&apos;&quot;+E+&quot; prev&apos;&gt;&quot;+a.prevText+&quot;&lt;/a&gt;&lt;a href=&apos;#&apos; class=&apos;&quot;+E+&quot; next&apos;&gt;&quot;+a.nextText+&quot;&lt;/a&gt;&quot;;l.navContainer?c(a.navContainer).append(g):f.after(g);var d=c(&quot;.&quot;+d+&quot;_nav&quot;),G=d.filter(&quot;.prev&quot;);d.bind(&quot;click&quot;,function(b)&#123;b.preventDefault();b=c(&quot;.&quot;+j);if(!b.queue(&quot;fx&quot;).length)&#123;var d=e.index(b);b=d-1;d=d+1&lt;C?n+1:0;z(c(this)[0]===G[0]?b:d);if(a.pager||a.manualControls)r(c(this)[0]===G[0]?b:d);a.pauseControls||m()&#125;&#125;);</span><br><span class="line">a.pauseControls&amp;&amp;d.hover(function()&#123;clearInterval(p)&#125;,function()&#123;m()&#125;)&#125;&#125;if(&quot;undefined&quot;===typeof document.body.style.maxWidth&amp;&amp;l.maxwidth)&#123;var H=function()&#123;f.css(&quot;width&quot;,&quot;100%&quot;);f.width()&gt;u&amp;&amp;f.css(&quot;width&quot;,u)&#125;;H();c(I).bind(&quot;resize&quot;,function()&#123;H()&#125;)&#125;&#125;)&#125;&#125;)(jQuery,this,0);</span><br></pre></td></tr></table></figure>
+            </div>
         </div>
+    </div>
 </article>
 
-    
-        <article class="simple-article">
+
+
+
+    <section id="comment">
         <div class="card">
             <div class="card-content">
-                <div class="article-title">
-                    
-    
-        <h1 class="indigo-link-context"><a href="/2016/05/21/js各种插件/">js各种插件</a></h1>
-    
+                <!-- Duoshuo Comment BEGIN -->
+                <div class="ds-thread" data-thread-key="2016/05/21/js各种插件/" data-title="js各种插件" data-url="http://yoursite.com/2016/05/21/js各种插件/"></div>
 
-
-                </div>
-
-                <time class="pink-link-context" datetime="2016-05-21T09:54:35.000Z"><a href="/2016/05/21/js各种插件/">2016-05-21</a></time>
-
-                
-
-
-                
+                <script type="text/javascript">
+                    console.log(document.querySelector('.ds-thread'));
+                    var duoshuoQuery = {
+                        short_name: 'wttodo101'
+                    };
+                    (function() {
+                        var ds = document.createElement('script');
+                        ds.type = 'text/javascript';
+                        ds.async = true;
+                        ds.src = (document.location.protocol == 'https:'
+                            ? 'https:'
+                            : 'http:') + '//static.duoshuo.com/embed.js';
+                        ds.charset = 'UTF-8';
+                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+                    })();
+                </script>
+                <!-- Duoshuo Comment END -->
             </div>
-
-            
         </div>
-</article>
+    </section>
 
-    
-        <article class="simple-article">
-        <div class="card">
-            <div class="card-content">
-                <div class="article-title">
-                    
-    
-        <h1 class="indigo-link-context"><a href="/2016/05/16/自动化工具/">自动化工具步骤</a></h1>
-    
 
-
-                </div>
-
-                <time class="pink-link-context" datetime="2016-05-16T11:11:14.000Z"><a href="/2016/05/16/自动化工具/">2016-05-16</a></time>
-
-                
-
-
-                
-            </div>
-
-            
-        </div>
-</article>
-
-    
-        <article class="simple-article">
-        <div class="card">
-            <div class="card-content">
-                <div class="article-title">
-                    
-    
-        <h1 class="indigo-link-context"><a href="/2016/05/13/CSS3在不知道图片具体值，实现居中/">CSS3在不知道图片具体值，实现居中</a></h1>
-    
-
-
-                </div>
-
-                <time class="pink-link-context" datetime="2016-05-13T03:12:19.000Z"><a href="/2016/05/13/CSS3在不知道图片具体值，实现居中/">2016-05-13</a></time>
-
-                
-
-
-                
-            </div>
-
-            
-        </div>
-</article>
-
-    
-        <article class="simple-article">
-        <div class="card">
-            <div class="card-content">
-                <div class="article-title">
-                    
-    
-        <h1 class="indigo-link-context"><a href="/2016/05/12/我的博客（一）/">HTML5简介</a></h1>
-    
-
-
-                </div>
-
-                <time class="pink-link-context" datetime="2016-05-12T11:37:42.000Z"><a href="/2016/05/12/我的博客（一）/">2016-05-12</a></time>
-
-                
-
-
-                
-            </div>
-
-            
-        </div>
-</article>
-
-    
-        <article class="simple-article">
-        <div class="card">
-            <div class="card-content">
-                <div class="article-title">
-                    
-    
-        <h1 class="indigo-link-context"><a href="/2016/05/12/Git常用命令/">Git常用命令</a></h1>
-    
-
-
-                </div>
-
-                <time class="pink-link-context" datetime="2016-05-12T08:18:17.000Z"><a href="/2016/05/12/Git常用命令/">2016-05-12</a></time>
-
-                
-
-
-                
-            </div>
-
-            
-        </div>
-</article>
-
-    
-        <article class="simple-article">
-        <div class="card">
-            <div class="card-content">
-                <div class="article-title">
-                    
-    
-        <h1 class="indigo-link-context"><a href="/2016/05/12/伪元素/">伪元素</a></h1>
-    
-
-
-                </div>
-
-                <time class="pink-link-context" datetime="2016-05-12T07:25:26.000Z"><a href="/2016/05/12/伪元素/">2016-05-12</a></time>
-
-                
-
-
-                
-            </div>
-
-            
-        </div>
-</article>
-
-    
-        <article class="simple-article">
-        <div class="card">
-            <div class="card-content">
-                <div class="article-title">
-                    
-    
-        <h1 class="indigo-link-context"><a href="/2016/05/12/创建GitHub技术博客攻略/">创建GitHub技术博客攻略</a></h1>
-    
-
-
-                </div>
-
-                <time class="pink-link-context" datetime="2016-05-12T06:08:44.000Z"><a href="/2016/05/12/创建GitHub技术博客攻略/">2016-05-12</a></time>
-
-                
-
-
-                
-            </div>
-
-            
-        </div>
-</article>
-
-    
-        <article class="simple-article">
-        <div class="card">
-            <div class="card-content">
-                <div class="article-title">
-                    
-    
-        <h1 class="indigo-link-context"><a href="/2016/05/12/火星文/">火星文</a></h1>
-    
-
-
-                </div>
-
-                <time class="pink-link-context" datetime="2016-05-12T06:06:16.000Z"><a href="/2016/05/12/火星文/">2016-05-12</a></time>
-
-                
-
-
-                
-            </div>
-
-            
-        </div>
-</article>
-
-    
-        <article class="simple-article">
-        <div class="card">
-            <div class="card-content">
-                <div class="article-title">
-                    
-    
-        <h1 class="indigo-link-context"><a href="/2016/05/11/我的博客（一）git常用命令/">写博客/更新博客步骤：</a></h1>
-    
-
-
-                </div>
-
-                <time class="pink-link-context" datetime="2016-05-11T13:20:48.000Z"><a href="/2016/05/11/我的博客（一）git常用命令/">2016-05-11</a></time>
-
-                
-
-
-                
-            </div>
-
-            
-        </div>
-</article>
-
-    
-
-    <ul class="pagination center-align">
-    <li class="disabled">
-        <a href="/"><i class="fa fa-angle-left"></i></a>
-    </li>
-    
-    
-        <li class="active pink"><a href="/">1</a></li>
-    
-    
-    <li class="disabled">
-        <a href="/"><i class="fa fa-angle-right"></i></a>
-    </li>
- </ul>
 
 </div>
 
