@@ -230,10 +230,8 @@ var requset=new ActiveXObject(&quot;Microsoft.XMLHTTP&quot;);//IE5、6
     }
   };
 </code></pre><ul>
-<li><p>请求状态监控</p>
-<ul>
-<li><p>onreadystatechange事件</p>
-<ul>
+<li>请求状态监控<ul>
+<li>onreadystatechange事件<ul>
 <li>readyState属性：请求状态</li>
 <li>0  （初始化）还没有调用open()方法</li>
 <li>1  （载入）已调用send()方法，正在发送请求</li>
@@ -245,14 +243,13 @@ var requset=new ActiveXObject(&quot;Microsoft.XMLHTTP&quot;);//IE5、6
 </ul>
 </li>
 <li>status属性：服务器(请求资源)的状态</li>
-<li><p>返回的内容</p>
-<ul>
+<li>返回的内容<ul>
 <li>responseText：返回以文本形式存放的内容</li>
 <li>responseXML：返回XML形式的内容</li>
 </ul>
-<p>requset.status==200代表成功，requset.status还有好多状态码<a href="http://baike.baidu.com/link?url=3yJ7CWWYuzk3U5SsSvLjswBqdcP6AT1PcH0dZH6oapmkHE_bOOgY0qh4PzfjnVKdOIyEG3EfFEJvl9RhjlYA2WH7hkxGI9AscvL531tbY52-V77ZYkcg0VEct0z2Uv0XMb_3vYXKV7xRaplt6eQTlq" target="_blank" rel="external">点击这里查看</a></p>
 </li>
 </ul>
+<p>requset.status==200代表成功，requset.status还有好多状态码<a href="http://baike.baidu.com/link?url=3yJ7CWWYuzk3U5SsSvLjswBqdcP6AT1PcH0dZH6oapmkHE_bOOgY0qh4PzfjnVKdOIyEG3EfFEJvl9RhjlYA2WH7hkxGI9AscvL531tbY52-V77ZYkcg0VEct0z2Uv0XMb_3vYXKV7xRaplt6eQTlq" target="_blank" rel="external">点击这里查看</a></p>
 <h4 id="POST请求方式跟GET方式没有太大的区别，我直接上我封装的函数把！"><a href="#POST请求方式跟GET方式没有太大的区别，我直接上我封装的函数把！" class="headerlink" title="POST请求方式跟GET方式没有太大的区别，我直接上我封装的函数把！"></a>POST请求方式跟GET方式没有太大的区别，我直接上我封装的函数把！</h4><pre><code> //POST请求
  function requestByPOST(url,postbody,successCallback,errorCallback){
 
