@@ -7,7 +7,7 @@
 
     
 
-    <title>js各种插件 | myblog</title>
+    <title>JavaScript实现ajax | myblog</title>
     <meta name="author" content="吴兆强">
     
     <meta name="description" content="坑">
@@ -15,7 +15,7 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <meta property="og:title" content="js各种插件"/>
+    <meta property="og:title" content="JavaScript实现ajax"/>
     <meta property="og:site_name" content="当你坚持不住的时候，再坚持一下"/>
 
     
@@ -197,97 +197,28 @@
             <div class="article-title">
                 
     
-        <h1>js各种插件</h1>
+        <h1>JavaScript实现ajax</h1>
     
 
 
             </div>
-            <time class="pink-link-context" datetime="2016-05-21T09:54:35.000Z"><a href="/2016/05/21/js各种插件/">2016-05-21</a></time>
+            <time class="pink-link-context" datetime="2016-07-09T06:43:38.000Z"><a href="/2016/07/09/w/">2016-07-09</a></time>
 
             
+    <div class="tags-row">
+        
+            <a href="/tags/JavaScript实现ajax/" class="chip pink lighten-1">JavaScript实现ajax</a>
+        
+    </div>
+
 
             <div class="toc pink-link-context hide-on-med-and-down">
-    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-4"><a class="section table-of-contents-link" href="#jQuery轻量级响应式图片轮播插件ResponsiveSlides-js-仅1kb"><span class="section table-of-contents-text">jQuery轻量级响应式图片轮播插件ResponsiveSlides.js(仅1kb)</span></a></li><li class="section table-of-contents-item section table-of-contents-level-4"><a class="section table-of-contents-link" href="#调用"><span class="section table-of-contents-text">调用:</span></a></li><li class="section table-of-contents-item section table-of-contents-level-4"><a class="section table-of-contents-link" href="#参数："><span class="section table-of-contents-text">参数：</span></a></li></ol></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#ResponsiveSlides-js官网：http-responsiveslides-com"><span class="section table-of-contents-text">ResponsiveSlides.js官网：http://responsiveslides.com/</span></a>
+    
 </div>
 
 
             <div class="entry pink-link-context">
-                <h4 id="jQuery轻量级响应式图片轮播插件ResponsiveSlides-js-仅1kb"><a href="#jQuery轻量级响应式图片轮播插件ResponsiveSlides-js-仅1kb" class="headerlink" title="jQuery轻量级响应式图片轮播插件ResponsiveSlides.js(仅1kb)"></a>jQuery轻量级响应式图片轮播插件ResponsiveSlides.js(仅1kb)</h4><p>ResponsiveSlides.js是一个展示同一容器内图片的轻量级响应式jQuery幻灯片插件(tiny responsive slideshow jQuery plugin)。它支持包括IE6在内的几乎所有的浏览器，在IE6中还支持最大宽度属性，但在其它浏览器中并不原生支持。你需要做的只是链接jquery并且把图片裁剪为相同大小。<br>特点：</p>
-<p>1.文件较小(通过缩减和gz压缩只有792字节)</p>
-<p>2.功能简单(ResponsiveSlides.js只支持三种模式：图片自动淡出淡入和使用页码标签，或者左右来手动切换图片。)</p>
-<p>浏览器支持：</p>
-<p>Internet Explorer 6,7,8,9</p>
-<p>Firefox 3,6,8,11</p>
-<p>Safari 5,5.1</p>
-<p>Chrome 15,20</p>
-<p>Opera 11,11.6<br>iOS Safari</p>
-<p>Symbian 3 Webkit</p>
-<p>Opera Mobile 10.1</p>
-<p>Opera Mini for iOS</p>
-<p>IE7, IE9 Mobile</p>
-<p>Firefox Mobile</p>
-<p>Android 2.3+</p>
-<p>Kindle browser</p>
-<pre><code>&lt;script src=&quot;responsiveslides.min.js&quot;&gt;&lt;/script&gt;
-</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">/*! http://responsiveslides.com v1.54 by @viljamis */</span><br><span class="line">(function(c,I,B)&#123;c.fn.responsiveSlides=function(l)&#123;var a=c.extend(&#123;auto:!0,speed:500,timeout:4E3,pager:!1,nav:!1,random:!1,pause:!1,pauseControls:!0,prevText:&quot;Previous&quot;,nextText:&quot;Next&quot;,maxwidth:&quot;&quot;,navContainer:&quot;&quot;,manualControls:&quot;&quot;,namespace:&quot;rslides&quot;,before:c.noop,after:c.noop&#125;,l);return this.each(function()&#123;B++;var f=c(this),s,r,t,m,p,q,n=0,e=f.children(),C=e.size(),h=parseFloat(a.speed),D=parseFloat(a.timeout),u=parseFloat(a.maxwidth),g=a.namespace,d=g+B,E=g+&quot;_nav &quot;+d+&quot;_nav&quot;,v=g+&quot;_here&quot;,j=d+&quot;_on&quot;,</span><br><span class="line">w=d+&quot;_s&quot;,k=c(&quot;&lt;ul class=&apos;&quot;+g+&quot;_tabs &quot;+d+&quot;_tabs&apos; /&gt;&quot;),x=&#123;&quot;float&quot;:&quot;left&quot;,position:&quot;relative&quot;,opacity:1,zIndex:2&#125;,y=&#123;&quot;float&quot;:&quot;none&quot;,position:&quot;absolute&quot;,opacity:0,zIndex:1&#125;,F=function()&#123;var b=(document.body||document.documentElement).style,a=&quot;transition&quot;;if(&quot;string&quot;===typeof b[a])return!0;s=[&quot;Moz&quot;,&quot;Webkit&quot;,&quot;Khtml&quot;,&quot;O&quot;,&quot;ms&quot;];var a=a.charAt(0).toUpperCase()+a.substr(1),c;for(c=0;c&lt;s.length;c++)if(&quot;string&quot;===typeof b[s[c]+a])return!0;return!1&#125;(),z=function(b)&#123;a.before(b);F?(e.removeClass(j).css(y).eq(b).addClass(j).css(x),</span><br><span class="line">n=b,setTimeout(function()&#123;a.after(b)&#125;,h)):e.stop().fadeOut(h,function()&#123;c(this).removeClass(j).css(y).css(&quot;opacity&quot;,1)&#125;).eq(b).fadeIn(h,function()&#123;c(this).addClass(j).css(x);a.after(b);n=b&#125;)&#125;;a.random&amp;&amp;(e.sort(function()&#123;return Math.round(Math.random())-0.5&#125;),f.empty().append(e));e.each(function(a)&#123;this.id=w+a&#125;);f.addClass(g+&quot; &quot;+d);l&amp;&amp;l.maxwidth&amp;&amp;f.css(&quot;max-width&quot;,u);e.hide().css(y).eq(0).addClass(j).css(x).show();F&amp;&amp;e.show().css(&#123;&quot;-webkit-transition&quot;:&quot;opacity &quot;+h+&quot;ms ease-in-out&quot;,&quot;-moz-transition&quot;:&quot;opacity &quot;+</span><br><span class="line">h+&quot;ms ease-in-out&quot;,&quot;-o-transition&quot;:&quot;opacity &quot;+h+&quot;ms ease-in-out&quot;,transition:&quot;opacity &quot;+h+&quot;ms ease-in-out&quot;&#125;);if(1&lt;e.size())&#123;if(D&lt;h+100)return;if(a.pager&amp;&amp;!a.manualControls)&#123;var A=[];e.each(function(a)&#123;a+=1;A+=&quot;&lt;li&gt;&lt;a href=&apos;#&apos; class=&apos;&quot;+w+a+&quot;&apos;&gt;&quot;+a+&quot;&lt;/a&gt;&lt;/li&gt;&quot;&#125;);k.append(A);l.navContainer?c(a.navContainer).append(k):f.after(k)&#125;a.manualControls&amp;&amp;(k=c(a.manualControls),k.addClass(g+&quot;_tabs &quot;+d+&quot;_tabs&quot;));(a.pager||a.manualControls)&amp;&amp;k.find(&quot;li&quot;).each(function(a)&#123;c(this).addClass(w+(a+1))&#125;);if(a.pager||a.manualControls)q=</span><br><span class="line">k.find(&quot;a&quot;),r=function(a)&#123;q.closest(&quot;li&quot;).removeClass(v).eq(a).addClass(v)&#125;;a.auto&amp;&amp;(t=function()&#123;p=setInterval(function()&#123;e.stop(!0,!0);var b=n+1&lt;C?n+1:0;(a.pager||a.manualControls)&amp;&amp;r(b);z(b)&#125;,D)&#125;,t());m=function()&#123;a.auto&amp;&amp;(clearInterval(p),t())&#125;;a.pause&amp;&amp;f.hover(function()&#123;clearInterval(p)&#125;,function()&#123;m()&#125;);if(a.pager||a.manualControls)q.bind(&quot;click&quot;,function(b)&#123;b.preventDefault();a.pauseControls||m();b=q.index(this);n===b||c(&quot;.&quot;+j).queue(&quot;fx&quot;).length||(r(b),z(b))&#125;).eq(0).closest(&quot;li&quot;).addClass(v),</span><br><span class="line">a.pauseControls&amp;&amp;q.hover(function()&#123;clearInterval(p)&#125;,function()&#123;m()&#125;);if(a.nav)&#123;g=&quot;&lt;a href=&apos;#&apos; class=&apos;&quot;+E+&quot; prev&apos;&gt;&quot;+a.prevText+&quot;&lt;/a&gt;&lt;a href=&apos;#&apos; class=&apos;&quot;+E+&quot; next&apos;&gt;&quot;+a.nextText+&quot;&lt;/a&gt;&quot;;l.navContainer?c(a.navContainer).append(g):f.after(g);var d=c(&quot;.&quot;+d+&quot;_nav&quot;),G=d.filter(&quot;.prev&quot;);d.bind(&quot;click&quot;,function(b)&#123;b.preventDefault();b=c(&quot;.&quot;+j);if(!b.queue(&quot;fx&quot;).length)&#123;var d=e.index(b);b=d-1;d=d+1&lt;C?n+1:0;z(c(this)[0]===G[0]?b:d);if(a.pager||a.manualControls)r(c(this)[0]===G[0]?b:d);a.pauseControls||m()&#125;&#125;);</span><br><span class="line">a.pauseControls&amp;&amp;d.hover(function()&#123;clearInterval(p)&#125;,function()&#123;m()&#125;)&#125;&#125;if(&quot;undefined&quot;===typeof document.body.style.maxWidth&amp;&amp;l.maxwidth)&#123;var H=function()&#123;f.css(&quot;width&quot;,&quot;100%&quot;);f.width()&gt;u&amp;&amp;f.css(&quot;width&quot;,u)&#125;;H();c(I).bind(&quot;resize&quot;,function()&#123;H()&#125;)&#125;&#125;)&#125;&#125;)(jQuery,this,0);</span><br></pre></td></tr></table></figure>
-<pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;css/responsiveslides.css&quot;&gt;
-</code></pre><pre><code>/*! http://responsiveslides.com v1.54 by @viljamis */
-
-.rslides {
-  position: relative;
-  list-style: none;
-  overflow: hidden;
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  }
-
-.rslides li {
-  -webkit-backface-visibility: hidden;
-  position: absolute;
-  display: none;
-  width: 100%;
-  left: 0;
-  top: 0;
-  }
-
-.rslides li:first-child {
-  position: relative;
-  display: block;
-  float: left;
-  }
-
-.rslides img {
-  display: block;
-  height: auto;
-  float: left;
-  width: 100%;
-  border: 0;
-  }
-</code></pre><h4 id="调用"><a href="#调用" class="headerlink" title="调用:"></a>调用:</h4><pre><code>&lt;script&gt;
-      $(function() {
-        $(&quot;.rslides&quot;).responsiveSlides();
-      });
-&lt;/script&gt;
-</code></pre><h4 id="参数："><a href="#参数：" class="headerlink" title="参数："></a>参数：</h4><pre><code>$(&quot;.rslides&quot;).responsiveSlides({
-     auto: true,             // Boolean: 设置是否自动播放, true or false
-      speed: 500,            // Integer: 动画持续时间，单位毫秒
-      timeout: 4000,          // Integer: 图片之间切换的时间，单位毫秒
-      pager: false,           // Boolean: 是否显示页码, true or false
-      nav: false,             // Boolean: 是否显示左右导航箭头（即上翻下翻）, true or false
-      random: false,          // Boolean: 随机幻灯片顺序, true or false
-      pause: false,           // Boolean: 鼠标悬停到幻灯上则暂停, true or false
-      pauseControls: true,    // Boolean: 悬停在控制板上则暂停, true or false
-      prevText: &quot;Previous&quot;,   // String: 往前翻按钮的显示文本
-      nextText: &quot;Next&quot;,       // String: 往后翻按钮的显示文本
-      maxwidth: &quot;&quot;,           // Integer: 幻灯的最大宽度
-      navContainer: &quot;&quot;,       // Selector: Where controls should be appended to, default is after the &apos;ul&apos;
-      manualControls: &quot;&quot;,     // Selector: 声明自定义分页导航
-      namespace: &quot;rslides&quot;,   // String: 修改默认的容器名称
-      before: function(){},   // Function: 回调之前的参数
-      after: function(){}     // Function: 回调之后的参数
-});
-</code></pre><h3 id="ResponsiveSlides-js官网：http-responsiveslides-com"><a href="#ResponsiveSlides-js官网：http-responsiveslides-com" class="headerlink" title="ResponsiveSlides.js官网：http://responsiveslides.com/"></a>ResponsiveSlides.js官网：<a href="http://responsiveslides.com/" target="_blank" rel="external">http://responsiveslides.com/</a></h3>
+                
             </div>
         </div>
     </div>
@@ -300,7 +231,7 @@
         <div class="card">
             <div class="card-content">
                 <!-- Duoshuo Comment BEGIN -->
-                <div class="ds-thread" data-thread-key="2016/05/21/js各种插件/" data-title="js各种插件" data-url="http://yoursite.com/2016/05/21/js各种插件/"></div>
+                <div class="ds-thread" data-thread-key="2016/07/09/w/" data-title="JavaScript实现ajax" data-url="http://yoursite.com/2016/07/09/w/"></div>
 
                 <script type="text/javascript">
                     console.log(document.querySelector('.ds-thread'));
