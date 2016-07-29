@@ -7,7 +7,7 @@
 
     
 
-    <title>Archives: 2016/7 | myblog</title>
+    <title>gulp解析、压缩、合并文件 | myblog</title>
     <meta name="author" content="promises">
     
     <meta name="description" content="坑">
@@ -15,7 +15,7 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    
+    <meta property="og:title" content="gulp解析、压缩、合并文件"/>
     <meta property="og:site_name" content="当你坚持不住的时候，再坚持一下"/>
 
     
@@ -177,40 +177,105 @@
 
     <main>
         <div class="container main-container">
-    
-
-<nav class="page-nav hide-on-small-only">
+    <nav class="page-nav hide-on-small-only">
     <div class="nav-wrapper indigo">
-        <span class="breadcrumb">Current page(Archives)</span>
+        <span class="breadcrumb">Current page(Categories)</span>
+        
+            
+
         
 
         
     </div>
 </nav>
 
+<article>
+    <div class="card">
+        <div class="card-content">
+            
+
+            <div class="article-title">
+                
+    
+        <h1>gulp解析、压缩、合并文件</h1>
+    
 
 
-    <ul class="collapsible mt-0" data-collapsible="accordion">
-        
-        
-            <li>
-                <div class="collapsible-header active">
-                    <i class="fa fa-archive"></i>2016
-                </div>
-                <div class="collapsible-body">
-                    <div class="collection">
-                        
-                            <a href="/2016/07/29/gulp解析、压缩、合并文件/" class="collection-item grey-text text-darken-1">
-                                <time datetime="2016-07-29T12:01:03.000Z">2016-07-29</time>
-                                <span>&nbsp;&nbsp;&nbsp;</span>
-                                gulp解析、压缩、合并文件
-                            </a>
-                        
-                    </div>
-                </div>
-            </li>
-        
-    </ul>
+            </div>
+            <time class="pink-link-context" datetime="2016-07-29T12:01:03.000Z"><a href="/2016/07/29/gulp解析、压缩、合并文件/">2016-07-29</a></time>
+
+            
+
+            <div class="toc pink-link-context hide-on-med-and-down">
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#gulp也是Node-js的一个第三方插件，因此我们要使用他需要先本地全局安装"><span class="section table-of-contents-text">gulp也是Node.js的一个第三方插件，因此我们要使用他需要先本地全局安装</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#终端进去你要操作的项目文件夹，初始化生成一个json文件"><span class="section table-of-contents-text">终端进去你要操作的项目文件夹，初始化生成一个json文件</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#下载一个gulp用来支持本文件夹"><span class="section table-of-contents-text">下载一个gulp用来支持本文件夹</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#在该文件加下创建一个名为gulpfile-js的文件"><span class="section table-of-contents-text">在该文件加下创建一个名为gulpfile.js的文件</span></a></li></ol></li><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#文件解析"><span class="section table-of-contents-text">文件解析</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-4"><a class="section table-of-contents-link" href="#解析less文件–css"><span class="section table-of-contents-text">解析less文件–css</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-5"><a class="section table-of-contents-link" href="#解析文件的命令大同小异，我就不一一列举了，下面给出需要下载库的名称，已经及得应用什么库，就在gulpfile-js里面require一下。"><span class="section table-of-contents-text">解析文件的命令大同小异，我就不一一列举了，下面给出需要下载库的名称，已经及得应用什么库，就在gulpfile.js里面require一下。</span></a></li><li class="section table-of-contents-item section table-of-contents-level-5"><a class="section table-of-contents-link" href="#gulp-jade-将jade文件解析成html"><span class="section table-of-contents-text">gulp-jade 将jade文件解析成html</span></a></li><li class="section table-of-contents-item section table-of-contents-level-5"><a class="section table-of-contents-link" href="#gulp-coffee-将coffee文件解析成js"><span class="section table-of-contents-text">gulp-coffee 将coffee文件解析成js</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#文件合并"><span class="section table-of-contents-text">文件合并</span></a></li><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#文件压缩"><span class="section table-of-contents-text">文件压缩</span></a>
+</div>
+
+
+            <div class="entry pink-link-context">
+                <h2 id="gulp也是Node-js的一个第三方插件，因此我们要使用他需要先本地全局安装"><a href="#gulp也是Node-js的一个第三方插件，因此我们要使用他需要先本地全局安装" class="headerlink" title="gulp也是Node.js的一个第三方插件，因此我们要使用他需要先本地全局安装"></a>gulp也是Node.js的一个第三方插件，因此我们要使用他需要先本地全局安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo npm install -g gulp //获取管理员权限并全局安装gulp</span><br></pre></td></tr></table></figure>
+<h2 id="终端进去你要操作的项目文件夹，初始化生成一个json文件"><a href="#终端进去你要操作的项目文件夹，初始化生成一个json文件" class="headerlink" title="终端进去你要操作的项目文件夹，初始化生成一个json文件"></a>终端进去你要操作的项目文件夹，初始化生成一个json文件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm init	//初始化生成json文件</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h2 id="下载一个gulp用来支持本文件夹"><a href="#下载一个gulp用来支持本文件夹" class="headerlink" title="下载一个gulp用来支持本文件夹"></a>下载一个gulp用来支持本文件夹</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install gulp --save-dev</span><br></pre></td></tr></table></figure>
+<h2 id="在该文件加下创建一个名为gulpfile-js的文件"><a href="#在该文件加下创建一个名为gulpfile-js的文件" class="headerlink" title="在该文件加下创建一个名为gulpfile.js的文件"></a>在该文件加下创建一个名为gulpfile.js的文件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ touch gulpfile.js//创建gulpfile.js文件</span><br></pre></td></tr></table></figure>
+<h1 id="文件解析"><a href="#文件解析" class="headerlink" title="文件解析"></a>文件解析</h1><p>gulp在开发过程中是异常好用的工具，为什么这么说呢，那是因为你还没有接触过jade,less,coffee,这些文件是网页的内容的另一种形式，不知道的可以去<a href="http://www.baidu.com" target="_blank" rel="external">百度一下</a>！！！代码很简单，但是不能完全被浏览器解析，也许在将来的某一天，浏览器就能支持了呢，所以现在解析的重担还要我们来扛，用了这个那都不是事！！！废话不多说，赶紧开始吧！</p>
+<h4 id="解析less文件–css"><a href="#解析less文件–css" class="headerlink" title="解析less文件–css"></a>解析less文件–css</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install gulp-less --save-dev//下载名为gulp-less的插件</span><br></pre></td></tr></table></figure>
+<p>如何查看你是否已经下载好了？打开我们刚才初始化出来的json文件，看到如下图即安装完成且版本为3.1.0：</p>
+<p><img src="http://i4.buimg.com/9a6e8b60c5be3af9.png"></p>
+<p>既然已经下载，下面我们就要开始写方法解析less了！<br>打开gulpfile.js文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var gulp = require(<span class="string">'gulp'</span>);//调用gulp库</span><br><span class="line">var less = require(<span class="string">'gulp-less'</span>);//调用gulp-less库，用来把less文件解析成css文件</span><br><span class="line">gulp.tash(<span class="string">"fn1"</span>,<span class="function"><span class="title">function</span></span>()&#123;定制一个名为fn1的任务方法（函数）</span><br><span class="line">	<span class="built_in">return</span> gulp.src(<span class="string">'css/index.less'</span>)找到文件</span><br><span class="line">		.pipe(less(<span class="string">'index.css'</span>))//解析成index.css</span><br><span class="line">		.pipe(gulp.dest(<span class="string">'css/'</span>));//输出到css文件夹下</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>保存，回到终端，在项目文件夹下输入：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ gulp fn1//执行gulpfile.js文件里名为fn1的任务</span><br></pre></td></tr></table></figure></p>
+<p>执行完任务之后回到项目文件夹下的css文件夹看看我们解析出来的成果吧！</p>
+<h5 id="解析文件的命令大同小异，我就不一一列举了，下面给出需要下载库的名称，已经及得应用什么库，就在gulpfile-js里面require一下。"><a href="#解析文件的命令大同小异，我就不一一列举了，下面给出需要下载库的名称，已经及得应用什么库，就在gulpfile-js里面require一下。" class="headerlink" title="解析文件的命令大同小异，我就不一一列举了，下面给出需要下载库的名称，已经及得应用什么库，就在gulpfile.js里面require一下。"></a>解析文件的命令大同小异，我就不一一列举了，下面给出需要下载库的名称，已经及得应用什么库，就在gulpfile.js里面require一下。</h5><ul>
+<li><h5 id="gulp-jade-将jade文件解析成html"><a href="#gulp-jade-将jade文件解析成html" class="headerlink" title="gulp-jade 将jade文件解析成html"></a>gulp-jade 将jade文件解析成html</h5></li>
+<li><h5 id="gulp-coffee-将coffee文件解析成js"><a href="#gulp-coffee-将coffee文件解析成js" class="headerlink" title="gulp-coffee 将coffee文件解析成js"></a>gulp-coffee 将coffee文件解析成js</h5></li>
+</ul>
+<h1 id="文件合并"><a href="#文件合并" class="headerlink" title="文件合并"></a>文件合并</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install gulp-concat --save-dev//下载支持包gulp-concat</span><br></pre></td></tr></table></figure>
+<p>下载完之后，也要打开gulpfile.js文件写一个合并任务：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var gulp = require(<span class="string">'gulp'</span>);//调用gulp库</span><br><span class="line">var concat = require(<span class="string">'gulp-concat'</span>);	//调用gulp-concat库，用来把相同文件合并成一个文件；</span><br><span class="line">gulp.tash(<span class="string">"fn2"</span>,<span class="function"><span class="title">function</span></span>()&#123;		//定制一个名为fn2的任务方法（函数）</span><br><span class="line">	<span class="built_in">return</span> gulp.src(<span class="string">'css/*.css'</span>)	//找到css文件夹下的所有格式为css的文件</span><br><span class="line">		.pipe(concat(<span class="string">'index.css'</span>))	//合并成index.css</span><br><span class="line">		.pipe(gulp.dest(<span class="string">'css/'</span>));	//输出到css文件夹下</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>在终端执行一下fn2,完成任务！！！</p>
+<p>当然html和js都可以用这一个任务执行，只要更改文件路径，格式，合成名称及格式，输出地址就行了</p>
+<h1 id="文件压缩"><a href="#文件压缩" class="headerlink" title="文件压缩"></a>文件压缩</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install gulp-cssmin --save-dev//下载支持包gulp-cssmin该包用来压缩css文件</span><br></pre></td></tr></table></figure>
+<p>下载之后，打开gulpfile.js文件写一个合并css的任务：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var gulp = require(<span class="string">'gulp'</span>);//调用gulp库</span><br><span class="line">var cssmin = require(<span class="string">'gulp-cssmin'</span>);//调用gulp-cssmin库，用来压缩css文件；</span><br><span class="line">gulp.tash(<span class="string">"fn3"</span>,<span class="function"><span class="title">function</span></span>()&#123;		//定制一个名为fn3的任务方法（函数）</span><br><span class="line">	<span class="built_in">return</span> gulp.src(<span class="string">'css/index.css'</span>)	//找到css文件夹下的index.css文件</span><br><span class="line">		.pipe(cssmin())		//压缩index.css文件</span><br><span class="line">		.pipe(gulp.dest(<span class="string">'css/'</span>));		//输出到css文件夹下</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>打开终端，执行任务fn3,完成任务！！！</p>
+<p>当然你也可以把合并和压缩全部写进一个任务里面</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var gulp = require(<span class="string">'gulp'</span>);//调用gulp库</span><br><span class="line">var concat = require(<span class="string">'gulp-concat'</span>);//调用gulp-concat库，用来把相同文件合并成一个文件；</span><br><span class="line">var cssmin = require(<span class="string">'gulp-cssmin'</span>);//调用gulp-cssmin库，用来压缩css文件；</span><br><span class="line">gulp.tash(<span class="string">"fn4"</span>,<span class="function"><span class="title">function</span></span>()&#123;		//定制一个名为fn3的任务方法（函数）</span><br><span class="line">	<span class="built_in">return</span> gulp.src(<span class="string">'css/*.css'</span>)	//找到css文件夹下所有css文件</span><br><span class="line">		.pipe(concat(<span class="string">'index.css'</span>))	//合并为index.css文件</span><br><span class="line">		.pipe(cssmin())		//压缩合成的index.css文件</span><br><span class="line">		.pipe(gulp.dest(<span class="string">'css/'</span>));	//输出到css文件夹下</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>ok,有什么不懂的请留言！！！</p>
+
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+    <section id="comment">
+        <div class="card">
+            <div class="card-content">
+                <!-- Duoshuo Comment BEGIN -->
+                <div class="ds-thread" data-thread-key="2016/07/29/gulp解析、压缩、合并文件/" data-title="gulp解析、压缩、合并文件" data-url="http://yoursite.com/2016/07/29/gulp解析、压缩、合并文件/"></div>
+
+                <script type="text/javascript">
+                    console.log(document.querySelector('.ds-thread'));
+                    var duoshuoQuery = {
+                        short_name: 'wttodo101'
+                    };
+                    (function() {
+                        var ds = document.createElement('script');
+                        ds.type = 'text/javascript';
+                        ds.async = true;
+                        ds.src = (document.location.protocol == 'https:'
+                            ? 'https:'
+                            : 'http:') + '//static.duoshuo.com/embed.js';
+                        ds.charset = 'UTF-8';
+                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+                    })();
+                </script>
+                <!-- Duoshuo Comment END -->
+            </div>
+        </div>
+    </section>
+
 
 
 </div>
