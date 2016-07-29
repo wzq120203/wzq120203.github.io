@@ -7,7 +7,7 @@
 
     
 
-    <title>Archives: 2015/8 | myblog</title>
+    <title>CSS3在不知道图片具体值，实现居中 | myblog</title>
     <meta name="author" content="promises">
     
     <meta name="description" content="坑">
@@ -15,7 +15,7 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    
+    <meta property="og:title" content="CSS3在不知道图片具体值，实现居中"/>
     <meta property="og:site_name" content="当你坚持不住的时候，再坚持一下"/>
 
     
@@ -177,70 +177,79 @@
 
     <main>
         <div class="container main-container">
-    
-
-<nav class="page-nav hide-on-small-only">
+    <nav class="page-nav hide-on-small-only">
     <div class="nav-wrapper indigo">
-        <span class="breadcrumb">Current page(Archives)</span>
+        <span class="breadcrumb">Current page(Categories)</span>
+        
+            
+
         
 
         
     </div>
 </nav>
 
+<article>
+    <div class="card">
+        <div class="card-content">
+            
+
+            <div class="article-title">
+                
+    
+        <h1>CSS3在不知道图片具体值，实现居中</h1>
+    
 
 
-    <ul class="collapsible mt-0" data-collapsible="accordion">
-        
-        
-            <li>
-                <div class="collapsible-header active">
-                    <i class="fa fa-archive"></i>2015
-                </div>
-                <div class="collapsible-body">
-                    <div class="collection">
-                        
-                            <a href="/2015/08/30/自动化工具/" class="collection-item grey-text text-darken-1">
-                                <time datetime="2015-08-30T11:11:14.000Z">2015-08-30</time>
-                                <span>&nbsp;&nbsp;&nbsp;</span>
-                                安装环境
-                            </a>
-                        
-                            <a href="/2015/08/22/CSS3在不知道图片具体值，实现居中/" class="collection-item grey-text text-darken-1">
-                                <time datetime="2015-08-22T03:12:19.000Z">2015-08-22</time>
-                                <span>&nbsp;&nbsp;&nbsp;</span>
-                                CSS3在不知道图片具体值，实现居中
-                            </a>
-                        
-                            <a href="/2015/08/20/伪元素/" class="collection-item grey-text text-darken-1">
-                                <time datetime="2015-08-20T07:25:26.000Z">2015-08-20</time>
-                                <span>&nbsp;&nbsp;&nbsp;</span>
-                                伪元素
-                            </a>
-                        
-                            <a href="/2015/08/15/火星文/" class="collection-item grey-text text-darken-1">
-                                <time datetime="2015-08-15T06:06:16.000Z">2015-08-15</time>
-                                <span>&nbsp;&nbsp;&nbsp;</span>
-                                字符串常用方法
-                            </a>
-                        
-                            <a href="/2015/08/12/Git常用命令/" class="collection-item grey-text text-darken-1">
-                                <time datetime="2015-08-12T08:18:17.000Z">2015-08-12</time>
-                                <span>&nbsp;&nbsp;&nbsp;</span>
-                                Git常用命令
-                            </a>
-                        
-                            <a href="/2015/08/10/创建GitHub技术博客攻略/" class="collection-item grey-text text-darken-1">
-                                <time datetime="2015-08-10T06:08:44.000Z">2015-08-10</time>
-                                <span>&nbsp;&nbsp;&nbsp;</span>
-                                创建GitHub技术博客攻略
-                            </a>
-                        
-                    </div>
-                </div>
-            </li>
-        
-    </ul>
+            </div>
+            <time class="pink-link-context" datetime="2015-08-22T03:12:19.000Z"><a href="/2015/08/22/CSS3在不知道图片具体值，实现居中/">2015-08-22</a></time>
+
+            
+
+            <div class="toc pink-link-context hide-on-med-and-down">
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-4"><a class="section table-of-contents-link" href="#第一种方法："><span class="section table-of-contents-text">第一种方法：</span></a></li><li class="section table-of-contents-item section table-of-contents-level-4"><a class="section table-of-contents-link" href="#第二种方法："><span class="section table-of-contents-text">第二种方法：</span></a></li></ol>
+</div>
+
+
+            <div class="entry pink-link-context">
+                <h4 id="第一种方法："><a href="#第一种方法：" class="headerlink" title="第一种方法："></a>第一种方法：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">.div1&#123; </span><br><span class="line">    width:400px;</span><br><span class="line">    </span><br><span class="line">    height:200px;</span><br><span class="line">    </span><br><span class="line">    border:solid 1px #ccc;</span><br><span class="line">    </span><br><span class="line">    background-image:url(http://b.hiphotos.baidu.com/image/h%3D360/sign=3d111ae7e3cd7b89f66c3c853f244291/1e30e924b899a901a51e411b18950a7b0208f5f0.jpg) </span><br><span class="line">    </span><br><span class="line">    background-position:50% 50%;    </span><br><span class="line">           </span><br><span class="line">    background-size:contain; </span><br><span class="line">                   </span><br><span class="line">    background-repeat:no-repeat;  </span><br><span class="line">    margin: 0 auto;         </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&lt;section class=&quot;div1&quot;&gt;&lt;/section&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="第二种方法："><a href="#第二种方法：" class="headerlink" title="第二种方法："></a>第二种方法：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">:&lt;div style=&quot;width:30vw;background:#fff;&quot;&gt;</span><br><span class="line">		&lt;div style=&quot;height:180px;border:1px #999 solid;overflow:hidden;&quot;&gt;</span><br><span class="line">			&lt;div style=&quot;height:178px;display:table;text-align:center;width:100%;&quot;&gt;</span><br><span class="line">				&lt;a href=&quot;#&quot; style=&quot;height:178px;display:table-cell;vertical-align:middle;&quot;&gt;</span><br><span class="line">					&lt;img style=&quot;max-width: 100%;max-height: 180px;&quot; src=&quot;1.jpg&quot; alt=&quot;&quot;/&gt;</span><br><span class="line">				&lt;/a&gt;</span><br><span class="line">			&lt;/div&gt;</span><br><span class="line">		&lt;/div&gt;</span><br><span class="line">		&lt;h2&gt;</span><br><span class="line">			&lt;a href=&quot;#&quot;&gt;UV 新品抢鲜 仅限今日！ 名媛一字肩显瘦连衣&lt;/a&gt;</span><br><span class="line">		&lt;/h2&gt;</span><br><span class="line">	&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+    <section id="comment">
+        <div class="card">
+            <div class="card-content">
+                <!-- Duoshuo Comment BEGIN -->
+                <div class="ds-thread" data-thread-key="2015/08/22/CSS3在不知道图片具体值，实现居中/" data-title="CSS3在不知道图片具体值，实现居中" data-url="http://yoursite.com/2015/08/22/CSS3在不知道图片具体值，实现居中/"></div>
+
+                <script type="text/javascript">
+                    console.log(document.querySelector('.ds-thread'));
+                    var duoshuoQuery = {
+                        short_name: 'wttodo101'
+                    };
+                    (function() {
+                        var ds = document.createElement('script');
+                        ds.type = 'text/javascript';
+                        ds.async = true;
+                        ds.src = (document.location.protocol == 'https:'
+                            ? 'https:'
+                            : 'http:') + '//static.duoshuo.com/embed.js';
+                        ds.charset = 'UTF-8';
+                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+                    })();
+                </script>
+                <!-- Duoshuo Comment END -->
+            </div>
+        </div>
+    </section>
+
 
 
 </div>
