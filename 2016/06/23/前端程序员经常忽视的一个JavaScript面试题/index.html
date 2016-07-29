@@ -7,7 +7,7 @@
 
     
 
-    <title>字符串常用方法 | myblog</title>
+    <title>前端程序员经常忽视的一个JavaScript面试题 | myblog</title>
     <meta name="author" content="promises">
     
     <meta name="description" content="坑">
@@ -15,7 +15,7 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <meta property="og:title" content="字符串常用方法"/>
+    <meta property="og:title" content="前端程序员经常忽视的一个JavaScript面试题"/>
     <meta property="og:site_name" content="当你坚持不住的时候，再坚持一下"/>
 
     
@@ -197,71 +197,148 @@
             <div class="article-title">
                 
     
-        <h1>字符串常用方法</h1>
+        <h1>前端程序员经常忽视的一个JavaScript面试题</h1>
     
 
 
             </div>
-            <time class="pink-link-context" datetime="2015-08-15T06:06:16.000Z"><a href="/2015/08/15/火星文/">2015-08-15</a></time>
+            <time class="pink-link-context" datetime="2016-06-23T08:31:34.000Z"><a href="/2016/06/23/前端程序员经常忽视的一个JavaScript面试题/">2016-06-23</a></time>
 
             
 
             <div class="toc pink-link-context hide-on-med-and-down">
-    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#charAt"><span class="section table-of-contents-text">charAt()</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#charCodeAt"><span class="section table-of-contents-text">charCodeAt()</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#concat"><span class="section table-of-contents-text">concat()</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#fromCharCode"><span class="section table-of-contents-text">fromCharCode()</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#indexOf"><span class="section table-of-contents-text">indexOf()</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#lastIndexOf"><span class="section table-of-contents-text">lastIndexOf()</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#match"><span class="section table-of-contents-text">match()</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#replace"><span class="section table-of-contents-text">replace()</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#search"><span class="section table-of-contents-text">search()</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#slice"><span class="section table-of-contents-text">slice()</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#split"><span class="section table-of-contents-text">split()</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#substr"><span class="section table-of-contents-text">substr()</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#substring"><span class="section table-of-contents-text">substring()</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#toLowerCase"><span class="section table-of-contents-text">toLowerCase()</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#toUpperCase"><span class="section table-of-contents-text">toUpperCase()</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#valueOf-NaN"><span class="section table-of-contents-text">valueOf()</span></a></li></ol>
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-4"><a class="section table-of-contents-link" href="#第一问"><span class="section table-of-contents-text">第一问</span></a></li><li class="section table-of-contents-item section table-of-contents-level-4"><a class="section table-of-contents-link" href="#第二问"><span class="section table-of-contents-text">第二问</span></a></li></ol></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#变量声明提升"><span class="section table-of-contents-text">变量声明提升</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-4"><a class="section table-of-contents-link" href="#第三问"><span class="section table-of-contents-text">第三问</span></a></li><li class="section table-of-contents-item section table-of-contents-level-4"><a class="section table-of-contents-link" href="#第四问"><span class="section table-of-contents-text">第四问</span></a></li><li class="section table-of-contents-item section table-of-contents-level-4"><a class="section table-of-contents-link" href="#第五问"><span class="section table-of-contents-text">第五问</span></a></li><li class="section table-of-contents-item section table-of-contents-level-4"><a class="section table-of-contents-link" href="#第六问"><span class="section table-of-contents-text">第六问</span></a></li><li class="section table-of-contents-item section table-of-contents-level-4"><a class="section table-of-contents-link" href="#第七问"><span class="section table-of-contents-text">第七问</span></a></li></ol>
 </div>
 
 
             <div class="entry pink-link-context">
-                <h3 id="charAt"><a href="#charAt" class="headerlink" title="charAt()"></a>charAt()</h3><p>charAt(num)方法可返回指定位置的字符。</p>
-<p><strong>num为数值，如果num不在0和字符串长度之间，则其结果返回一个空的字符串</strong></p>
-<p>代码如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var str=<span class="string">"hello world!"</span>;</span><br><span class="line">console.log(str.charAt(0));		//h</span><br><span class="line">console.log(str.charAt(1));		//e</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-<h3 id="charCodeAt"><a href="#charCodeAt" class="headerlink" title="charCodeAt()"></a>charCodeAt()</h3><p>charCodeAt(num)方法可返回指定位置的字符的 Unicode 编码。这个返回值是 0 - 65535 之间的整数。</p>
-<p><strong>num为数值</strong></p>
-<p>代码如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var str=<span class="string">"hello world!"</span>;</span><br><span class="line">console.log(str.charCodeAt(0));		//104</span><br><span class="line">console.log(str.charCodeAt(1));		//101</span><br></pre></td></tr></table></figure>
-<h3 id="concat"><a href="#concat" class="headerlink" title="concat()"></a>concat()</h3><p>concat()方法用于连接两个或者多了字符串</p>
-<p><strong>多个的顺序为从左向右连接</strong></p>
-<p>代码如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var str=<span class="string">"hello world!"</span>;</span><br><span class="line">var str1=<span class="string">"我是str1"</span>;</span><br><span class="line">var str2=<span class="string">"我是str2"</span>;</span><br><span class="line">console.log(str.concat(str1));		//hello world!我是str1</span><br><span class="line">console.log(str.concat(str2,str1));		//hello world!我是str2我是str1</span><br><span class="line">console.log(str.concat(str2,<span class="string">"我是字符串"</span>,str1));		//hello world!我是str2我是字符串我是str1</span><br></pre></td></tr></table></figure>
-<h3 id="fromCharCode"><a href="#fromCharCode" class="headerlink" title="fromCharCode()"></a>fromCharCode()</h3><p>fromCharCode() 可接受一个指定的 Unicode 值，然后返回一个字符串。</p>
-<p><strong>该方法是 String 的静态方法，字符串中的每个字符都由单独的数字 Unicode 编码指定。</strong></p>
-<p>代码如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">console.log(String.fromCharCode(65,66,67));	//ABC</span><br></pre></td></tr></table></figure>
-<h3 id="indexOf"><a href="#indexOf" class="headerlink" title="indexOf()"></a>indexOf()</h3><p>indexOf(x1,x2)该方法用来查找字符串中是否x1这个字符串；</p>
-<p><strong>x1为想要查找的字符串，x2为想要开始的位置，范围是0-字符串长度-1，如果省略，则，从0开始向右，一般都是省略，如果未找到则返回-1,如果有多个则只返回第一个的位置；</strong></p>
-<p>代码如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var str=<span class="string">"hello world!"</span>;</span><br><span class="line">console.log(str.indexOf(“h”));	//0</span><br><span class="line">console.log(str.indexOf(“o wor”));	//4</span><br><span class="line">console.log(str.indexOf(“maii”));	//-1</span><br></pre></td></tr></table></figure>
-<h3 id="lastIndexOf"><a href="#lastIndexOf" class="headerlink" title="lastIndexOf()"></a>lastIndexOf()</h3><p>该方法同indexOf()，只不过是从后面向前面查找的</p>
-<h3 id="match"><a href="#match" class="headerlink" title="match()"></a>match()</h3><p>match()方法可在字符串内检索指定的值，或找到一个或多个正则表达式的匹配。</p>
-<p><strong>该方法类似 indexOf() 和 lastIndexOf()，但是它返回是一个数组里面为匹配到的字符串，而不是字符串的位置。</strong></p>
-<p>代码如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var str=<span class="string">"h1e2l3l4o wo57r3ld!"</span>;</span><br><span class="line">console.log(str.match(/\d/g))		//[<span class="string">"1"</span>, <span class="string">"2"</span>, <span class="string">"3"</span>, <span class="string">"4"</span>, <span class="string">"5"</span>, <span class="string">"7"</span>, <span class="string">"3"</span>]</span><br></pre></td></tr></table></figure>
-<h3 id="replace"><a href="#replace" class="headerlink" title="replace()"></a>replace()</h3><p>replace() 方法用于在字符串中用一些字符替换另一些字符，或替换一个与正则表达式匹配的子串。</p>
-<p>代码如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var str=<span class="string">"hello world!"</span>;</span><br><span class="line">console.log(str.replace(<span class="string">"hello"</span>,<span class="string">"maii"</span>));		//maii world!</span><br></pre></td></tr></table></figure>
-<h3 id="search"><a href="#search" class="headerlink" title="search()"></a>search()</h3><p>search() 方法用于检索字符串中指定的子字符串，或检索与正则表达式相匹配的子字符串。<br><strong>与indexOf()类似，但是其长用在正则匹配里</strong><br>代码如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var str=<span class="string">"hello world!"</span>;</span><br><span class="line">console.log(str.search(<span class="string">"hello"</span>));		//0</span><br><span class="line">console.log(str.search(<span class="string">"llo"</span>));			//2</span><br></pre></td></tr></table></figure>
-<h3 id="slice"><a href="#slice" class="headerlink" title="slice()"></a>slice()</h3><p>slice(x,y) 方法可从已有的字符串或数组中返回选定的元素。<br><strong>截取字符串，从x开始到y结束，不含y</strong></p>
-<p>代码如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var str=<span class="string">"hello world!"</span>;</span><br><span class="line">console.log(str.slice(2,5));		//llo</span><br></pre></td></tr></table></figure>
-<h3 id="split"><a href="#split" class="headerlink" title="split()"></a>split()</h3><p>split() 方法用于把一个字符串分割成字符串数组。</p>
-<hr>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var str=<span class="string">"How are you doing today?"</span>;</span><br><span class="line">console.log(str.split(<span class="string">" "</span>));		//How,are,you,doing,today?</span><br><span class="line">console.log(str.split(<span class="string">""</span>));			//H,o,w, ,a,r,e, ,y,o,u, ,d,o,i,n,g, ,t,o,d,a,y,?</span><br><span class="line">console.log(str.split(<span class="string">" "</span>,3));			//How,are,you</span><br></pre></td></tr></table></figure>
-<h3 id="substr"><a href="#substr" class="headerlink" title="substr()"></a>substr()</h3><p>substr(x,y) 方法可在字符串中抽取从x下标开始的指定数目的字符。</p>
-<p><strong>y为长度，如果y不指定,则一直截取到最后</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var str=<span class="string">"hello world!"</span>;</span><br><span class="line">console.log(str.substr(2,5));		//oll w</span><br><span class="line">console.log(str.substr(2));			//llo world!</span><br></pre></td></tr></table></figure>
-<h3 id="substring"><a href="#substring" class="headerlink" title="substring()"></a>substring()</h3><p>substring() 方法用于提取字符串中介于两个指定下标之间的字符。</p>
-<p><strong>和上一个方法相同，不做演示</strong></p>
-<h3 id="toLowerCase"><a href="#toLowerCase" class="headerlink" title="toLowerCase()"></a>toLowerCase()</h3><p>toLowerCase() 方法用于把字符串转换为小写。</p>
-<p>代码如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var str=<span class="string">"HELLO WORLD!"</span>;</span><br><span class="line">console.log(str.toLowerCase());			//hello world!</span><br></pre></td></tr></table></figure>
-<h3 id="toUpperCase"><a href="#toUpperCase" class="headerlink" title="toUpperCase()"></a>toUpperCase()</h3><p>toUpperCase():全部字符变为大写，返回新字符串。</p>
-<p>代码如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var str=<span class="string">"hello world!"</span>;</span><br><span class="line">console.log(str.toLowerCase());			//HELLO WORLD!</span><br></pre></td></tr></table></figure>
-<h3 id="valueOf-NaN"><a href="#valueOf-NaN" class="headerlink" title="valueOf()"></a>valueOf()</h3><p>valueOf() 方法可返回 Boolean 对象的原始值。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var bol=<span class="literal">true</span>;</span><br><span class="line">console.log(bol.valueOf());		//<span class="literal">true</span>肯定是<span class="literal">true</span>了貌似没什么用，如果不是布尔类型，直接输出该值</span><br></pre></td></tr></table></figure>
+                <p>题目如下：</p>
+<pre><code>function Foo() {
+    getName = function () { alert (1); };
+    return this;
+}
+Foo.getName = function () { alert (2);};
+Foo.prototype.getName = function () { alert (3);};
+var getName = function () { alert (4);};
+function getName() { alert (5);}
+
+//请写出以下输出结果：
+    Foo.getName();
+    getName();
+    Foo().getName();
+    getName();
+    new Foo.getName();
+    new Foo().getName();
+    new new Foo().getName();
+答案是：
+</code></pre><p>```</p>
+<pre><code>function Foo() {
+    getName = function () { alert (1); };
+    return this;
+}
+Foo.getName = function () { alert (2);};
+Foo.prototype.getName = function () { alert (3);};
+var getName = function () { alert (4);};
+function getName() { alert (5);}
+
+//答案：
+Foo.getName();//2
+getName();//4
+Foo().getName();//1
+getName();//1
+new Foo.getName();//2
+new Foo().getName();//3
+new new Foo().getName();//3
+</code></pre><p>此题是我综合之前的开发经验以及遇到的JS各种坑汇集而成。此题涉及的知识点众多，包括变量定义提升、this指针指向、运算符优先级、原型、继承、全局变量污染、对象属性及原型属性优先级等等。</p>
+<p>此题包含7小问，分别说下。</p>
+<h4 id="第一问"><a href="#第一问" class="headerlink" title="第一问"></a>第一问</h4><p>先看此题的上半部分做了什么，首先定义了一个叫Foo的函数，之后为Foo创建了一个叫getName的静态属性存储了一个匿名函数，之后为Foo的原型对象新创建了一个叫getName的匿名函数。之后又通过函数变量表达式创建了一个getName的函数，最后再声明一个叫getName函数。</p>
+<p>第一问的 Foo.getName 自然是访问Foo函数上存储的静态属性，自然是2，没什么可说的。</p>
+<h4 id="第二问"><a href="#第二问" class="headerlink" title="第二问"></a>第二问</h4><p>第二问，直接调用 getName 函数。既然是直接调用那么就是访问当前上文作用域内的叫getName的函数，所以跟1 2 3都没什么关系。此题有无数面试者回答为5。此处有两个坑，一是变量声明提升，二是函数表达式。</p>
+<h3 id="变量声明提升"><a href="#变量声明提升" class="headerlink" title="变量声明提升"></a>变量声明提升</h3><p>即所有声明变量或声明函数都会被提升到当前函数的顶部。</p>
+<p>例如下代码:</p>
+<pre><code>console.log(&apos;x&apos; in window);//true
+var x;
+x = 0;
+</code></pre><p>代码执行时js引擎会将声明语句提升至代码最上方，变为：</p>
+<pre><code>var x;
+console.log(&apos;x&apos; in window);//true
+x = 0;
+</code></pre><p>函数表达式</p>
+<p>var getName 与 function getName 都是声明语句，区别在于 var getName 是函数表达式，而 function getName 是函数声明。关于JS中的各种函数创建方式可以看 大部分人都会做错的经典JS闭包面试题 这篇文章有详细说明。</p>
+<p>函数表达式最大的问题，在于js会将此代码拆分为两行代码分别执行。</p>
+<p>例如下代码：</p>
+<pre><code>console.log(x);//输出：function x(){}
+var x=1;
+function x(){}
+</code></pre><p>实际执行的代码为，先将 var x=1 拆分为 var x; 和 x = 1; 两行，再将 var x; 和 function x(){} 两行提升至最上方变成：</p>
+<pre><code>var x;
+function x(){}
+console.log(x);
+x=1;
+</code></pre><p>所以最终函数声明的x覆盖了变量声明的x，log输出为x函数。</p>
+<p>同理，原题中代码最终执行时的是：</p>
+<pre><code>function Foo() {
+getName = function () { alert (1); };
+return this;
+}
+var getName;//只提升变量声明
+function getName() { alert (5);}//提升函数声明，覆盖var的声明
+
+Foo.getName = function () { alert (2);};
+Foo.prototype.getName = function () { alert (3);};
+getName = function () { alert (4);};//最终的赋值再次覆盖function getName声明
+
+getName();//最终输出4
+</code></pre><h4 id="第三问"><a href="#第三问" class="headerlink" title="第三问"></a>第三问</h4><p>第三问的 Foo().getName(); 先执行了Foo函数，然后调用Foo函数的返回值对象的getName属性函数。</p>
+<p>Foo函数的第一句  getName = function () { alert (1); };  是一句函数赋值语句，注意它没有var声明，所以先向当前Foo函数作用域内寻找getName变量，没有。再向当前函数作用域上层，即外层作用域内寻找是否含有getName变量，找到了，也就是第二问中的alert(4)函数，将此变量的值赋值为 function(){alert(1)}。</p>
+<p>此处实际上是将外层作用域内的getName函数修改了。</p>
+<pre><code>注意：此处若依然没有找到会一直向上查找到window对象，若window对象中也没有getName属性，就在window对象中创建一个getName变量。
+</code></pre><p>之后Foo函数的返回值是this，而JS的this问题博客园中已经有非常多的文章介绍，这里不再多说。</p>
+<p>简单的讲，this的指向是由所在函数的调用方式决定的。而此处的直接调用方式，this指向window对象。</p>
+<p>遂Foo函数返回的是window对象，相当于执行 window.getName() ，而window中的getName已经被修改为alert(1)，所以最终会输出1</p>
+<p>此处考察了两个知识点，一个是变量作用域问题，一个是this指向问题。</p>
+<h4 id="第四问"><a href="#第四问" class="headerlink" title="第四问"></a>第四问</h4><p>直接调用getName函数，相当于 window.getName() ，因为这个变量已经被Foo函数执行时修改了，遂结果与第三问相同，为1</p>
+<h4 id="第五问"><a href="#第五问" class="headerlink" title="第五问"></a>第五问</h4><p>第五问 new Foo.getName(); ,此处考察的是js的运算符优先级问题。</p>
+<p>js运算符优先级:</p>
+<p><img src="http://o73bxc872.bkt.clouddn.com/f5660b1cc96bfe7c839541d5faeaa8f4.png" alt="jsakld"></p>
+<pre><code>参考链接：https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Operator_Precedence
+
+通过查上表可以得知点（.）的优先级高于new操作，遂相当于是:
+</code></pre><p>new (Foo.getName)();<br>所以实际上将getName函数作为了构造函数来执行，遂弹出2。</p>
+<h4 id="第六问"><a href="#第六问" class="headerlink" title="第六问"></a>第六问</h4><p>第六问 new Foo().getName() ，首先看运算符优先级括号高于new，实际执行为</p>
+<pre><code>(new Foo()).getName()
+</code></pre><p>遂先执行Foo函数，而Foo此时作为构造函数却有返回值，所以这里需要说明下js中的构造函数返回值问题。</p>
+<p>构造函数的返回值</p>
+<p>在传统语言中，构造函数不应该有返回值，实际执行的返回值就是此构造函数的实例化对象。</p>
+<p>而在js中构造函数可以有返回值也可以没有。</p>
+<p>1、没有返回值则按照其他语言一样返回实例化对象。</p>
+<pre><code>function F(){}
+undefind
+new F()
+F{}
+</code></pre><p>2、若有返回值则检查其返回值是否为引用类型。如果是非引用类型，如基本类型（string,number,boolean,null,undefined）则与无返回值相同，实际返回其实例化对象。</p>
+<pre><code>function F(){return true}
+undefind
+new F()
+F{}
+</code></pre><p>3、若返回值是引用类型，则实际返回值为这个引用类型。</p>
+<pre><code>function F(){return {a:1};}
+undefind
+new F()
+F{}
+</code></pre><p>原题中，返回的是this，而this在构造函数中本来就代表当前实例化对象，遂最终Foo函数返回实例化对象。</p>
+<p>之后调用实例化对象的getName函数，因为在Foo构造函数中没有为实例化对象添加任何属性，遂到当前对象的原型对象（prototype）中寻找getName，找到了。</p>
+<p>遂最终输出3。</p>
+<h4 id="第七问"><a href="#第七问" class="headerlink" title="第七问"></a>第七问</h4><p>第七问, new new Foo().getName(); 同样是运算符优先级问题。</p>
+<p>最终实际执行为：</p>
+<pre><code>new ((new Foo()).getName)();
+</code></pre><p>先初始化Foo的实例化对象，然后将其原型上的getName函数作为构造函数再次new。</p>
+<p>遂最终结果为3</p>
+<p>最后</p>
+<p>就答题情况而言，第一问100%都可以回答正确，第二问大概只有50%正确率，第三问能回答正确的就不多了，第四问再正确就非常非常少了。其实此题并没有太多刁钻匪夷所思的用法，都是一些可能会遇到的场景，而大多数人但凡有1年到2年的工作经验都应该完全正确才对。</p>
+<p>只能说有一些人太急躁太轻视了，希望大家通过此文了解js一些特性。</p>
+<p>并祝愿大家在新的一年找工作面试中胆大心细，发挥出最好的水平，找到一份理想的工作。</p>
+
             </div>
         </div>
     </div>
@@ -274,7 +351,7 @@
         <div class="card">
             <div class="card-content">
                 <!-- Duoshuo Comment BEGIN -->
-                <div class="ds-thread" data-thread-key="2015/08/15/火星文/" data-title="字符串常用方法" data-url="http://yoursite.com/2015/08/15/火星文/"></div>
+                <div class="ds-thread" data-thread-key="2016/06/23/前端程序员经常忽视的一个JavaScript面试题/" data-title="前端程序员经常忽视的一个JavaScript面试题" data-url="http://yoursite.com/2016/06/23/前端程序员经常忽视的一个JavaScript面试题/"></div>
 
                 <script type="text/javascript">
                     console.log(document.querySelector('.ds-thread'));

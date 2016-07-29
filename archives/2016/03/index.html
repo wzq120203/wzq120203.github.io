@@ -7,7 +7,7 @@
 
     
 
-    <title>字符串常用方法 | myblog</title>
+    <title>归档：2016/3 | myblog</title>
     <meta name="author" content="promises">
     
     <meta name="description" content="坑">
@@ -15,7 +15,7 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <meta property="og:title" content="字符串常用方法"/>
+    
     <meta property="og:site_name" content="当你坚持不住的时候，再坚持一下"/>
 
     
@@ -177,126 +177,40 @@
 
     <main>
         <div class="container main-container">
-    <nav class="page-nav hide-on-small-only">
-    <div class="nav-wrapper indigo">
-        <span class="breadcrumb">当前位置（分类目录）</span>
-        
-            
+    
 
+<nav class="page-nav hide-on-small-only">
+    <div class="nav-wrapper indigo">
+        <span class="breadcrumb">当前位置（归档）</span>
         
 
         
     </div>
 </nav>
 
-<article>
-    <div class="card">
-        <div class="card-content">
-            
-
-            <div class="article-title">
-                
-    
-        <h1>字符串常用方法</h1>
-    
 
 
-            </div>
-            <time class="pink-link-context" datetime="2015-08-15T06:06:16.000Z"><a href="/2015/08/15/火星文/">2015-08-15</a></time>
-
-            
-
-            <div class="toc pink-link-context hide-on-med-and-down">
-    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#charAt"><span class="section table-of-contents-text">charAt()</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#charCodeAt"><span class="section table-of-contents-text">charCodeAt()</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#concat"><span class="section table-of-contents-text">concat()</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#fromCharCode"><span class="section table-of-contents-text">fromCharCode()</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#indexOf"><span class="section table-of-contents-text">indexOf()</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#lastIndexOf"><span class="section table-of-contents-text">lastIndexOf()</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#match"><span class="section table-of-contents-text">match()</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#replace"><span class="section table-of-contents-text">replace()</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#search"><span class="section table-of-contents-text">search()</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#slice"><span class="section table-of-contents-text">slice()</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#split"><span class="section table-of-contents-text">split()</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#substr"><span class="section table-of-contents-text">substr()</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#substring"><span class="section table-of-contents-text">substring()</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#toLowerCase"><span class="section table-of-contents-text">toLowerCase()</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#toUpperCase"><span class="section table-of-contents-text">toUpperCase()</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#valueOf-NaN"><span class="section table-of-contents-text">valueOf()</span></a></li></ol>
-</div>
-
-
-            <div class="entry pink-link-context">
-                <h3 id="charAt"><a href="#charAt" class="headerlink" title="charAt()"></a>charAt()</h3><p>charAt(num)方法可返回指定位置的字符。</p>
-<p><strong>num为数值，如果num不在0和字符串长度之间，则其结果返回一个空的字符串</strong></p>
-<p>代码如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var str=<span class="string">"hello world!"</span>;</span><br><span class="line">console.log(str.charAt(0));		//h</span><br><span class="line">console.log(str.charAt(1));		//e</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-<h3 id="charCodeAt"><a href="#charCodeAt" class="headerlink" title="charCodeAt()"></a>charCodeAt()</h3><p>charCodeAt(num)方法可返回指定位置的字符的 Unicode 编码。这个返回值是 0 - 65535 之间的整数。</p>
-<p><strong>num为数值</strong></p>
-<p>代码如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var str=<span class="string">"hello world!"</span>;</span><br><span class="line">console.log(str.charCodeAt(0));		//104</span><br><span class="line">console.log(str.charCodeAt(1));		//101</span><br></pre></td></tr></table></figure>
-<h3 id="concat"><a href="#concat" class="headerlink" title="concat()"></a>concat()</h3><p>concat()方法用于连接两个或者多了字符串</p>
-<p><strong>多个的顺序为从左向右连接</strong></p>
-<p>代码如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var str=<span class="string">"hello world!"</span>;</span><br><span class="line">var str1=<span class="string">"我是str1"</span>;</span><br><span class="line">var str2=<span class="string">"我是str2"</span>;</span><br><span class="line">console.log(str.concat(str1));		//hello world!我是str1</span><br><span class="line">console.log(str.concat(str2,str1));		//hello world!我是str2我是str1</span><br><span class="line">console.log(str.concat(str2,<span class="string">"我是字符串"</span>,str1));		//hello world!我是str2我是字符串我是str1</span><br></pre></td></tr></table></figure>
-<h3 id="fromCharCode"><a href="#fromCharCode" class="headerlink" title="fromCharCode()"></a>fromCharCode()</h3><p>fromCharCode() 可接受一个指定的 Unicode 值，然后返回一个字符串。</p>
-<p><strong>该方法是 String 的静态方法，字符串中的每个字符都由单独的数字 Unicode 编码指定。</strong></p>
-<p>代码如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">console.log(String.fromCharCode(65,66,67));	//ABC</span><br></pre></td></tr></table></figure>
-<h3 id="indexOf"><a href="#indexOf" class="headerlink" title="indexOf()"></a>indexOf()</h3><p>indexOf(x1,x2)该方法用来查找字符串中是否x1这个字符串；</p>
-<p><strong>x1为想要查找的字符串，x2为想要开始的位置，范围是0-字符串长度-1，如果省略，则，从0开始向右，一般都是省略，如果未找到则返回-1,如果有多个则只返回第一个的位置；</strong></p>
-<p>代码如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var str=<span class="string">"hello world!"</span>;</span><br><span class="line">console.log(str.indexOf(“h”));	//0</span><br><span class="line">console.log(str.indexOf(“o wor”));	//4</span><br><span class="line">console.log(str.indexOf(“maii”));	//-1</span><br></pre></td></tr></table></figure>
-<h3 id="lastIndexOf"><a href="#lastIndexOf" class="headerlink" title="lastIndexOf()"></a>lastIndexOf()</h3><p>该方法同indexOf()，只不过是从后面向前面查找的</p>
-<h3 id="match"><a href="#match" class="headerlink" title="match()"></a>match()</h3><p>match()方法可在字符串内检索指定的值，或找到一个或多个正则表达式的匹配。</p>
-<p><strong>该方法类似 indexOf() 和 lastIndexOf()，但是它返回是一个数组里面为匹配到的字符串，而不是字符串的位置。</strong></p>
-<p>代码如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var str=<span class="string">"h1e2l3l4o wo57r3ld!"</span>;</span><br><span class="line">console.log(str.match(/\d/g))		//[<span class="string">"1"</span>, <span class="string">"2"</span>, <span class="string">"3"</span>, <span class="string">"4"</span>, <span class="string">"5"</span>, <span class="string">"7"</span>, <span class="string">"3"</span>]</span><br></pre></td></tr></table></figure>
-<h3 id="replace"><a href="#replace" class="headerlink" title="replace()"></a>replace()</h3><p>replace() 方法用于在字符串中用一些字符替换另一些字符，或替换一个与正则表达式匹配的子串。</p>
-<p>代码如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var str=<span class="string">"hello world!"</span>;</span><br><span class="line">console.log(str.replace(<span class="string">"hello"</span>,<span class="string">"maii"</span>));		//maii world!</span><br></pre></td></tr></table></figure>
-<h3 id="search"><a href="#search" class="headerlink" title="search()"></a>search()</h3><p>search() 方法用于检索字符串中指定的子字符串，或检索与正则表达式相匹配的子字符串。<br><strong>与indexOf()类似，但是其长用在正则匹配里</strong><br>代码如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var str=<span class="string">"hello world!"</span>;</span><br><span class="line">console.log(str.search(<span class="string">"hello"</span>));		//0</span><br><span class="line">console.log(str.search(<span class="string">"llo"</span>));			//2</span><br></pre></td></tr></table></figure>
-<h3 id="slice"><a href="#slice" class="headerlink" title="slice()"></a>slice()</h3><p>slice(x,y) 方法可从已有的字符串或数组中返回选定的元素。<br><strong>截取字符串，从x开始到y结束，不含y</strong></p>
-<p>代码如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var str=<span class="string">"hello world!"</span>;</span><br><span class="line">console.log(str.slice(2,5));		//llo</span><br></pre></td></tr></table></figure>
-<h3 id="split"><a href="#split" class="headerlink" title="split()"></a>split()</h3><p>split() 方法用于把一个字符串分割成字符串数组。</p>
-<hr>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var str=<span class="string">"How are you doing today?"</span>;</span><br><span class="line">console.log(str.split(<span class="string">" "</span>));		//How,are,you,doing,today?</span><br><span class="line">console.log(str.split(<span class="string">""</span>));			//H,o,w, ,a,r,e, ,y,o,u, ,d,o,i,n,g, ,t,o,d,a,y,?</span><br><span class="line">console.log(str.split(<span class="string">" "</span>,3));			//How,are,you</span><br></pre></td></tr></table></figure>
-<h3 id="substr"><a href="#substr" class="headerlink" title="substr()"></a>substr()</h3><p>substr(x,y) 方法可在字符串中抽取从x下标开始的指定数目的字符。</p>
-<p><strong>y为长度，如果y不指定,则一直截取到最后</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var str=<span class="string">"hello world!"</span>;</span><br><span class="line">console.log(str.substr(2,5));		//oll w</span><br><span class="line">console.log(str.substr(2));			//llo world!</span><br></pre></td></tr></table></figure>
-<h3 id="substring"><a href="#substring" class="headerlink" title="substring()"></a>substring()</h3><p>substring() 方法用于提取字符串中介于两个指定下标之间的字符。</p>
-<p><strong>和上一个方法相同，不做演示</strong></p>
-<h3 id="toLowerCase"><a href="#toLowerCase" class="headerlink" title="toLowerCase()"></a>toLowerCase()</h3><p>toLowerCase() 方法用于把字符串转换为小写。</p>
-<p>代码如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var str=<span class="string">"HELLO WORLD!"</span>;</span><br><span class="line">console.log(str.toLowerCase());			//hello world!</span><br></pre></td></tr></table></figure>
-<h3 id="toUpperCase"><a href="#toUpperCase" class="headerlink" title="toUpperCase()"></a>toUpperCase()</h3><p>toUpperCase():全部字符变为大写，返回新字符串。</p>
-<p>代码如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var str=<span class="string">"hello world!"</span>;</span><br><span class="line">console.log(str.toLowerCase());			//HELLO WORLD!</span><br></pre></td></tr></table></figure>
-<h3 id="valueOf-NaN"><a href="#valueOf-NaN" class="headerlink" title="valueOf()"></a>valueOf()</h3><p>valueOf() 方法可返回 Boolean 对象的原始值。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var bol=<span class="literal">true</span>;</span><br><span class="line">console.log(bol.valueOf());		//<span class="literal">true</span>肯定是<span class="literal">true</span>了貌似没什么用，如果不是布尔类型，直接输出该值</span><br></pre></td></tr></table></figure>
-            </div>
-        </div>
-    </div>
-</article>
-
-
-
-
-    <section id="comment">
-        <div class="card">
-            <div class="card-content">
-                <!-- Duoshuo Comment BEGIN -->
-                <div class="ds-thread" data-thread-key="2015/08/15/火星文/" data-title="字符串常用方法" data-url="http://yoursite.com/2015/08/15/火星文/"></div>
-
-                <script type="text/javascript">
-                    console.log(document.querySelector('.ds-thread'));
-                    var duoshuoQuery = {
-                        short_name: 'wttodo101'
-                    };
-                    (function() {
-                        var ds = document.createElement('script');
-                        ds.type = 'text/javascript';
-                        ds.async = true;
-                        ds.src = (document.location.protocol == 'https:'
-                            ? 'https:'
-                            : 'http:') + '//static.duoshuo.com/embed.js';
-                        ds.charset = 'UTF-8';
-                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
-                    })();
-                </script>
-                <!-- Duoshuo Comment END -->
-            </div>
-        </div>
-    </section>
-
+    <ul class="collapsible mt-0" data-collapsible="accordion">
+        
+        
+            <li>
+                <div class="collapsible-header active">
+                    <i class="fa fa-archive"></i>2016
+                </div>
+                <div class="collapsible-body">
+                    <div class="collection">
+                        
+                            <a href="/2016/03/09/w/" class="collection-item grey-text text-darken-1">
+                                <time datetime="2016-03-09T06:43:38.000Z">2016-03-09</time>
+                                <span>&nbsp;&nbsp;&nbsp;</span>
+                                JavaScript实现ajax
+                            </a>
+                        
+                    </div>
+                </div>
+            </li>
+        
+    </ul>
 
 
 </div>
