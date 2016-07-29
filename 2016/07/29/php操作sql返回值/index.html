@@ -7,7 +7,7 @@
 
     
 
-    <title>myblog</title>
+    <title>php操作sql返回值 | myblog</title>
     <meta name="author" content="promises">
     
     <meta name="description" content="坑">
@@ -15,7 +15,7 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    
+    <meta property="og:title" content="php操作sql返回值"/>
     <meta property="og:site_name" content="当你坚持不住的时候，再坚持一下"/>
 
     
@@ -176,352 +176,106 @@
 
 
     <main>
+        <div class="container main-container">
+    <nav class="page-nav hide-on-small-only">
+    <div class="nav-wrapper indigo">
+        <span class="breadcrumb">Current page(Categories)</span>
+        
+            
+
         
 
-<div class="slider">
-    <ul class="slides">
-    
-       <li>
-           <a href="javascript:;">
-               <img class="slider-image" src="http://lorempixel.com/580/250/nature/7">
-               <div class="caption center-align">
-                 <h4>Hard-edged, convergence of breath</h3>
-                 <h5 class="light grey-text text-lighten-3">blade flashing</h5>
-               </div>
-           </a>
-       </li>
-    
-       <li>
-           <a href="javascript:;">
-               <img class="slider-image" src="http://lorempixel.com/580/250/nature/8">
-               <div class="caption left-align">
-                 <h4>Left Aligned Caption</h3>
-                 <h5 class="light grey-text text-lighten-3">Here&#39;s our small slogan.</h5>
-               </div>
-           </a>
-       </li>
-    
-       <li>
-           <a href="javascript:;">
-               <img class="slider-image" src="http://lorempixel.com/580/250/nature/4">
-               <div class="caption right-align">
-                 <h4>Right Aligned Caption</h3>
-                 <h5 class="light grey-text text-lighten-3">Here&#39;s our small slogan.</h5>
-               </div>
-           </a>
-       </li>
-    
-   </ul>
- </div>
+        
+    </div>
+</nav>
 
+<article>
+    <div class="card">
+        <div class="card-content">
+            
 
-
-<div id="article-list" class="container main-container">
-    
-        <article class="simple-article">
-        <div class="card">
-            <div class="card-content">
-                <div class="article-title">
-                    
-    
-        <h1 class="indigo-link-context"><a href="/2016/07/29/php操作sql返回值/">php操作sql返回值</a></h1>
-    
-
-
-                </div>
-
-                <time class="pink-link-context" datetime="2016-07-29T12:45:39.000Z"><a href="/2016/07/29/php操作sql返回值/">2016-07-29</a></time>
-
+            <div class="article-title">
                 
+    
+        <h1>php操作sql返回值</h1>
+    
 
 
-                
-                    <div class="entry pink-link-context">
-                        <p>今天我们继续来探究一下php操作sql,对于数据库的操作无非就是CRUD，刚学的，就是增删改查四个单词的简称，以后看到了要知道是什么（create,read,update,delete）。</p>
+            </div>
+            <time class="pink-link-context" datetime="2016-07-29T12:45:39.000Z"><a href="/2016/07/29/php操作sql返回值/">2016-07-29</a></time>
+
+            
+
+            <div class="toc pink-link-context hide-on-med-and-down">
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#执行-增删改-result的值"><span class="section table-of-contents-text">执行 增删改 $result的值</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#执行-查-result的值"><span class="section table-of-contents-text">执行 查 $result的值</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-4"><a class="section table-of-contents-link" href="#现在我们来看看这个object到底是什么，从上图中它的名字很容易看出来它是一个mysqli-result类型的object对象，我们只是看到了一堆没用的信息，我们查到的信息在哪里呢？其实这里面还是有可以利用的信息的，那就是num-rows-它的值代表着我们查询到了多少条相符的信息。常用来验证登录，注册，很简单就是拿到登录或注册的信息去数据库里查找，看-result-gt-num-rows的值，如果是0，那就是没有，如果是1（一般都是1，哪有一个用户表里面有两个相同的用户名？）那就是数据库中已经存在。但是如果只有这一个作用那未免太屈才了。下面就给大家介绍如何把查询到的结果一步步地拽出来！！！"><span class="section table-of-contents-text">现在我们来看看这个object到底是什么，从上图中它的名字很容易看出来它是一个mysqli_result类型的object对象，我们只是看到了一堆没用的信息，我们查到的信息在哪里呢？其实这里面还是有可以利用的信息的，那就是num_rows,它的值代表着我们查询到了多少条相符的信息。常用来验证登录，注册，很简单就是拿到登录或注册的信息去数据库里查找，看$result->num_rows的值，如果是0，那就是没有，如果是1（一般都是1，哪有一个用户表里面有两个相同的用户名？）那就是数据库中已经存在。但是如果只有这一个作用那未免太屈才了。下面就给大家介绍如何把查询到的结果一步步地拽出来！！！</span></a></li></ol></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#查询结果解析"><span class="section table-of-contents-text">查询结果解析</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-4"><a class="section table-of-contents-link" href="#把查询结果转换成关联数组"><span class="section table-of-contents-text">把查询结果转换成关联数组</span></a></li><li class="section table-of-contents-item section table-of-contents-level-4"><a class="section table-of-contents-link" href="#把查询结果转换成索引数组"><span class="section table-of-contents-text">把查询结果转换成索引数组</span></a></li><li class="section table-of-contents-item section table-of-contents-level-4"><a class="section table-of-contents-link" href="#把查询结果转换成数组"><span class="section table-of-contents-text">把查询结果转换成数组</span></a></li><li class="section table-of-contents-item section table-of-contents-level-4"><a class="section table-of-contents-link" href="#把查询结果转换成对象"><span class="section table-of-contents-text">把查询结果转换成对象</span></a></li><li class="section table-of-contents-item section table-of-contents-level-4"><a class="section table-of-contents-link" href="#大家可能会问了，为什么我的数据库里面有多条数据怎么只显示了一条呢？那是因为这种处理查询结果的方式一次只能处理一条，处理完第一条数据时，光标会定位到第二条数据的头部。如果你想输出每条数据很简单，代码如下："><span class="section table-of-contents-text">大家可能会问了，为什么我的数据库里面有多条数据怎么只显示了一条呢？那是因为这种处理查询结果的方式一次只能处理一条，处理完第一条数据时，光标会定位到第二条数据的头部。如果你想输出每条数据很简单，代码如下：</span></a></li></ol></li></ol>
+</div>
+
+
+            <div class="entry pink-link-context">
+                <p>今天我们继续来探究一下php操作sql,对于数据库的操作无非就是CRUD，刚学的，就是增删改查四个单词的简称，以后看到了要知道是什么（create,read,update,delete）。</p>
 <p>上次的博客已经教大家如何使用php对mysql进行操作了，那么操作之后的返回值是什么呢。下面就进入正题！！！</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$sql</span> = <span class="string">"SELECT * FROM table"</span>;</span><br><span class="line"><span class="variable">$result</span> = <span class="variable">$mysqli</span>-&gt;query(<span class="variable">$sql</span>);</span><br></pre></td></tr></table></figure>
-                    </div>
-                
-            </div>
+<a id="more"></a>
+<p><strong>那么这个$result在CRUD执行之后到底会返回什么鬼呢？如果按常理，会返回两种结果，无非就是成功与不成功，这只是猜想，其实你的猜想对了一半</strong></p>
+<h3 id="执行-增删改-result的值"><a href="#执行-增删改-result的值" class="headerlink" title="执行 增删改 $result的值"></a>执行 增删改 $result的值</h3><p><strong>要查看结果，需要用var_dump()打印其结果</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var_dump(<span class="variable">$result</span>);</span><br></pre></td></tr></table></figure>
+<p>得到<span style="color:blue">bool(true)</span>或<span style="color:blue">bool(false)</span>;</p>
+<h3 id="执行-查-result的值"><a href="#执行-查-result的值" class="headerlink" title="执行 查 $result的值"></a>执行 查 $result的值</h3><p><strong>继续打印</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var_dump(<span class="variable">$result</span>);</span><br></pre></td></tr></table></figure>
+<p>得到<span style="color:blue">object(mysqli_result)</span>或<span style="color:blue">bool(false)</span>;</p>
+<p><strong><span style="color:blue">object(mysqli_result)</span>就是我们所查询到的结果，然而在实际开发中，这也是最重要在数据</strong><br><img style="width:300px;border:2px solid #ccc" src="http://i4.piimg.com/4851/a194366e79323aff.png"></p>
+<h4 id="现在我们来看看这个object到底是什么，从上图中它的名字很容易看出来它是一个mysqli-result类型的object对象，我们只是看到了一堆没用的信息，我们查到的信息在哪里呢？其实这里面还是有可以利用的信息的，那就是num-rows-它的值代表着我们查询到了多少条相符的信息。常用来验证登录，注册，很简单就是拿到登录或注册的信息去数据库里查找，看-result-gt-num-rows的值，如果是0，那就是没有，如果是1（一般都是1，哪有一个用户表里面有两个相同的用户名？）那就是数据库中已经存在。但是如果只有这一个作用那未免太屈才了。下面就给大家介绍如何把查询到的结果一步步地拽出来！！！"><a href="#现在我们来看看这个object到底是什么，从上图中它的名字很容易看出来它是一个mysqli-result类型的object对象，我们只是看到了一堆没用的信息，我们查到的信息在哪里呢？其实这里面还是有可以利用的信息的，那就是num-rows-它的值代表着我们查询到了多少条相符的信息。常用来验证登录，注册，很简单就是拿到登录或注册的信息去数据库里查找，看-result-gt-num-rows的值，如果是0，那就是没有，如果是1（一般都是1，哪有一个用户表里面有两个相同的用户名？）那就是数据库中已经存在。但是如果只有这一个作用那未免太屈才了。下面就给大家介绍如何把查询到的结果一步步地拽出来！！！" class="headerlink" title="现在我们来看看这个object到底是什么，从上图中它的名字很容易看出来它是一个mysqli_result类型的object对象，我们只是看到了一堆没用的信息，我们查到的信息在哪里呢？其实这里面还是有可以利用的信息的，那就是num_rows,它的值代表着我们查询到了多少条相符的信息。常用来验证登录，注册，很简单就是拿到登录或注册的信息去数据库里查找，看$result-&gt;num_rows的值，如果是0，那就是没有，如果是1（一般都是1，哪有一个用户表里面有两个相同的用户名？）那就是数据库中已经存在。但是如果只有这一个作用那未免太屈才了。下面就给大家介绍如何把查询到的结果一步步地拽出来！！！"></a>现在我们来看看这个object到底是什么，从上图中它的名字很容易看出来它是一个mysqli_result类型的object对象，我们只是看到了一堆没用的信息，我们查到的信息在哪里呢？其实这里面还是有可以利用的信息的，那就是num_rows,它的值代表着我们查询到了多少条相符的信息。常用来验证登录，注册，很简单就是拿到登录或注册的信息去数据库里查找，看$result-&gt;num_rows的值，如果是0，那就是没有，如果是1（一般都是1，哪有一个用户表里面有两个相同的用户名？）那就是数据库中已经存在。但是如果只有这一个作用那未免太屈才了。下面就给大家介绍如何把查询到的结果一步步地拽出来！！！</h4><h3 id="查询结果解析"><a href="#查询结果解析" class="headerlink" title="查询结果解析"></a>查询结果解析</h3><p><strong>我们要得到最终的结果，还需要借助几个函数</strong></p>
+<h4 id="把查询结果转换成关联数组"><a href="#把查询结果转换成关联数组" class="headerlink" title="把查询结果转换成关联数组"></a>把查询结果转换成关联数组</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$row</span> = <span class="variable">$result</span>-&gt;fetch_assoc();</span><br><span class="line">var_dump(<span class="variable">$row</span>);</span><br></pre></td></tr></table></figure>
+<p><strong>打印结果如下：</strong></p>
+<p><img style="width:300px;border:2px solid #ccc" src="http://i4.piimg.com/4851/824287fc47d8bd38.png"></p>
+<h4 id="把查询结果转换成索引数组"><a href="#把查询结果转换成索引数组" class="headerlink" title="把查询结果转换成索引数组"></a>把查询结果转换成索引数组</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$row</span> = <span class="variable">$result</span>-&gt;fetch_row();</span><br><span class="line">var_dump(<span class="variable">$row</span>);</span><br></pre></td></tr></table></figure>
+<p><strong>打印结果如下：</strong></p>
+<p><img style="width:300px;border:2px solid #ccc" src="http://i4.piimg.com/4851/88fc698cb0ab9a4c.png"></p>
+<h4 id="把查询结果转换成数组"><a href="#把查询结果转换成数组" class="headerlink" title="把查询结果转换成数组"></a>把查询结果转换成数组</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$row</span> = <span class="variable">$result</span>-&gt;fetch_array(<span class="variable">$X</span>);</span><br><span class="line">var_dump(<span class="variable">$row</span>);</span><br></pre></td></tr></table></figure>
+<p><strong>$X为参数可选值为MYSQLI_ASSOC|MYSQLI_NUM|MYSQLI_BOTH，不难看出，当参数为MYSQLI_ASSOC时返回关联数组，当参数为MYSQLI_NUM时返回索引数组，当参数为MYSQLI_BOTH(默认)返回一个数组，但是这个数组既包含索引下标，也包含关联下标。打印结果如下：</strong></p>
+<p><img style="width:300px;border:2px solid #ccc" src="http://i1.piimg.com/4851/bdac52c3bef59c7a.png"></p>
+<h4 id="把查询结果转换成对象"><a href="#把查询结果转换成对象" class="headerlink" title="把查询结果转换成对象"></a>把查询结果转换成对象</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$row</span> = <span class="variable">$result</span>-&gt;fetch_object();</span><br><span class="line">var_dump(<span class="variable">$row</span>);</span><br></pre></td></tr></table></figure>
+<p><strong>打印结果如下：</strong></p>
+<p><img style="width:300px;border:2px solid #ccc" src="http://i1.piimg.com/4851/42c5ad7265c223ef.png"></p>
+<h4 id="大家可能会问了，为什么我的数据库里面有多条数据怎么只显示了一条呢？那是因为这种处理查询结果的方式一次只能处理一条，处理完第一条数据时，光标会定位到第二条数据的头部。如果你想输出每条数据很简单，代码如下："><a href="#大家可能会问了，为什么我的数据库里面有多条数据怎么只显示了一条呢？那是因为这种处理查询结果的方式一次只能处理一条，处理完第一条数据时，光标会定位到第二条数据的头部。如果你想输出每条数据很简单，代码如下：" class="headerlink" title="大家可能会问了，为什么我的数据库里面有多条数据怎么只显示了一条呢？那是因为这种处理查询结果的方式一次只能处理一条，处理完第一条数据时，光标会定位到第二条数据的头部。如果你想输出每条数据很简单，代码如下："></a>大家可能会问了，为什么我的数据库里面有多条数据怎么只显示了一条呢？那是因为这种处理查询结果的方式一次只能处理一条，处理完第一条数据时，光标会定位到第二条数据的头部。如果你想输出每条数据很简单，代码如下：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>(<span class="variable">$row</span> = <span class="variable">$result</span>-&gt;fetch_assoc())&#123;</span><br><span class="line">	<span class="built_in">print</span>_f(<span class="variable">$row</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>友情提示，打印数组需要用print_f()函数！！！</strong></p>
 
-            
-            <div class="card-action pink-link-context">
-                <a href="2016/07/29/php操作sql返回值/">READ MORE</a>
             </div>
-            
         </div>
+    </div>
 </article>
 
-    
-        <article class="simple-article">
+
+
+
+    <section id="comment">
         <div class="card">
             <div class="card-content">
-                <div class="article-title">
-                    
-    
-        <h1 class="indigo-link-context"><a href="/2016/07/03/gulp解析、压缩、合并文件/">gulp解析、压缩、合并文件</a></h1>
-    
+                <!-- Duoshuo Comment BEGIN -->
+                <div class="ds-thread" data-thread-key="2016/07/29/php操作sql返回值/" data-title="php操作sql返回值" data-url="http://yoursite.com/2016/07/29/php操作sql返回值/"></div>
 
-
-                </div>
-
-                <time class="pink-link-context" datetime="2016-07-03T12:01:03.000Z"><a href="/2016/07/03/gulp解析、压缩、合并文件/">2016-07-03</a></time>
-
-                
-
-
-                
-                    <div class="entry pink-link-context">
-                        <h2 id="gulp也是Node-js的一个第三方插件，因此我们要使用他需要先本地全局安装"><a href="#gulp也是Node-js的一个第三方插件，因此我们要使用他需要先本地全局安装" class="headerlink" title="gulp也是Node.js的一个第三方插件，因此我们要使用他需要先本地全局安装"></a>gulp也是Node.js的一个第三方插件，因此我们要使用他需要先本地全局安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo npm install -g gulp //获取管理员权限并全局安装gulp</span><br></pre></td></tr></table></figure>
-<h2 id="终端进去你要操作的项目文件夹，初始化生成一个json文件"><a href="#终端进去你要操作的项目文件夹，初始化生成一个json文件" class="headerlink" title="终端进去你要操作的项目文件夹，初始化生成一个json文件"></a>终端进去你要操作的项目文件夹，初始化生成一个json文件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm init	//初始化生成json文件</span><br></pre></td></tr></table></figure>
-                    </div>
-                
+                <script type="text/javascript">
+                    console.log(document.querySelector('.ds-thread'));
+                    var duoshuoQuery = {
+                        short_name: 'wttodo101'
+                    };
+                    (function() {
+                        var ds = document.createElement('script');
+                        ds.type = 'text/javascript';
+                        ds.async = true;
+                        ds.src = (document.location.protocol == 'https:'
+                            ? 'https:'
+                            : 'http:') + '//static.duoshuo.com/embed.js';
+                        ds.charset = 'UTF-8';
+                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+                    })();
+                </script>
+                <!-- Duoshuo Comment END -->
             </div>
-
-            
-            <div class="card-action pink-link-context">
-                <a href="2016/07/03/gulp解析、压缩、合并文件/">READ MORE</a>
-            </div>
-            
         </div>
-</article>
+    </section>
 
-    
-        <article class="simple-article">
-        <div class="card">
-            <div class="card-content">
-                <div class="article-title">
-                    
-    
-        <h1 class="indigo-link-context"><a href="/2016/06/23/前端程序员经常忽视的一个JavaScript面试题/">前端程序员经常忽视的一个JavaScript面试题</a></h1>
-    
 
-
-                </div>
-
-                <time class="pink-link-context" datetime="2016-06-23T08:31:34.000Z"><a href="/2016/06/23/前端程序员经常忽视的一个JavaScript面试题/">2016-06-23</a></time>
-
-                
-
-
-                
-            </div>
-
-            
-        </div>
-</article>
-
-    
-        <article class="simple-article">
-        <div class="card">
-            <div class="card-content">
-                <div class="article-title">
-                    
-    
-        <h1 class="indigo-link-context"><a href="/2016/03/29/php操作sql/">php操作sql</a></h1>
-    
-
-
-                </div>
-
-                <time class="pink-link-context" datetime="2016-03-29T12:33:50.000Z"><a href="/2016/03/29/php操作sql/">2016-03-29</a></time>
-
-                
-
-
-                
-                    <div class="entry pink-link-context">
-                        <h4 id="对于从事前端的我们来说php是一们陌生的语言，但是又特别熟悉，如何想从事全栈，这又是必不可少的技能，我来总结一下自己学到的一点php技巧。"><a href="#对于从事前端的我们来说php是一们陌生的语言，但是又特别熟悉，如何想从事全栈，这又是必不可少的技能，我来总结一下自己学到的一点php技巧。" class="headerlink" title="对于从事前端的我们来说php是一们陌生的语言，但是又特别熟悉，如何想从事全栈，这又是必不可少的技能，我来总结一下自己学到的一点php技巧。"></a>对于从事前端的我们来说php是一们陌生的语言，但是又特别熟悉，如何想从事全栈，这又是必不可少的技能，我来总结一下自己学到的一点php技巧。</h4><h3 id="链接数据库"><a href="#链接数据库" class="headerlink" title="链接数据库"></a>链接数据库</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$mysqli</span> = new mysqli(<span class="string">'localhost'</span>,<span class="string">'username'</span>,<span class="string">'password'</span>,<span class="string">'mysql'</span>);</span><br></pre></td></tr></table></figure>
-                    </div>
-                
-            </div>
-
-            
-            <div class="card-action pink-link-context">
-                <a href="2016/03/29/php操作sql/">READ MORE</a>
-            </div>
-            
-        </div>
-</article>
-
-    
-        <article class="simple-article">
-        <div class="card">
-            <div class="card-content">
-                <div class="article-title">
-                    
-    
-        <h1 class="indigo-link-context"><a href="/2016/03/09/w/">JavaScript实现ajax</a></h1>
-    
-
-
-                </div>
-
-                <time class="pink-link-context" datetime="2016-03-09T06:43:38.000Z"><a href="/2016/03/09/w/">2016-03-09</a></time>
-
-                
-
-
-                
-            </div>
-
-            
-        </div>
-</article>
-
-    
-        <article class="simple-article">
-        <div class="card">
-            <div class="card-content">
-                <div class="article-title">
-                    
-    
-        <h1 class="indigo-link-context"><a href="/2015/09/02/字符串常用方法/">字符串常用方法</a></h1>
-    
-
-
-                </div>
-
-                <time class="pink-link-context" datetime="2015-09-02T12:29:26.000Z"><a href="/2015/09/02/字符串常用方法/">2015-09-02</a></time>
-
-                
-
-
-                
-                    <div class="entry pink-link-context">
-                        <h3 id="charAt"><a href="#charAt" class="headerlink" title="charAt()"></a>charAt()</h3><p>charAt(num)方法可返回指定位置的字符。</p>
-<p><strong>num为数值，如果num不在0和字符串长度之间，则其结果返回一个空的字符串</strong></p>
-<p>代码如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var str=<span class="string">"hello world!"</span>;</span><br><span class="line">console.log(str.charAt(0));		//h</span><br><span class="line">console.log(str.charAt(1));		//e</span><br></pre></td></tr></table></figure>
-                    </div>
-                
-            </div>
-
-            
-            <div class="card-action pink-link-context">
-                <a href="2015/09/02/字符串常用方法/">READ MORE</a>
-            </div>
-            
-        </div>
-</article>
-
-    
-        <article class="simple-article">
-        <div class="card">
-            <div class="card-content">
-                <div class="article-title">
-                    
-    
-        <h1 class="indigo-link-context"><a href="/2015/08/25/js各种插件/">js一个小插件（幻灯片）</a></h1>
-    
-
-
-                </div>
-
-                <time class="pink-link-context" datetime="2015-08-25T09:54:35.000Z"><a href="/2015/08/25/js各种插件/">2015-08-25</a></time>
-
-                
-
-
-                
-            </div>
-
-            
-        </div>
-</article>
-
-    
-        <article class="simple-article">
-        <div class="card">
-            <div class="card-content">
-                <div class="article-title">
-                    
-    
-        <h1 class="indigo-link-context"><a href="/2015/08/22/CSS3在不知道图片具体值，实现居中/">CSS3在不知道图片具体值，实现居中</a></h1>
-    
-
-
-                </div>
-
-                <time class="pink-link-context" datetime="2015-08-22T03:12:19.000Z"><a href="/2015/08/22/CSS3在不知道图片具体值，实现居中/">2015-08-22</a></time>
-
-                
-
-
-                
-            </div>
-
-            
-        </div>
-</article>
-
-    
-        <article class="simple-article">
-        <div class="card">
-            <div class="card-content">
-                <div class="article-title">
-                    
-    
-        <h1 class="indigo-link-context"><a href="/2015/08/20/伪元素/">伪元素</a></h1>
-    
-
-
-                </div>
-
-                <time class="pink-link-context" datetime="2015-08-20T07:25:26.000Z"><a href="/2015/08/20/伪元素/">2015-08-20</a></time>
-
-                
-
-
-                
-            </div>
-
-            
-        </div>
-</article>
-
-    
-        <article class="simple-article">
-        <div class="card">
-            <div class="card-content">
-                <div class="article-title">
-                    
-    
-        <h1 class="indigo-link-context"><a href="/2015/08/12/HTML5简介-meta/">HTML5简介(meta)</a></h1>
-    
-
-
-                </div>
-
-                <time class="pink-link-context" datetime="2015-08-12T12:11:10.000Z"><a href="/2015/08/12/HTML5简介-meta/">2015-08-12</a></time>
-
-                
-
-
-                
-            </div>
-
-            
-        </div>
-</article>
-
-    
-
-    <ul class="pagination center-align">
-    <li class="disabled">
-        <a href="/"><i class="fa fa-angle-left"></i></a>
-    </li>
-    
-    
-        <li class="active pink"><a href="/">1</a></li>
-    
-        <li class="waves-effect"><a href="/page/2">2</a></li>
-    
-    
-    <li class="">
-        <a href="/page/2/"><i class="fa fa-angle-right"></i></a>
-    </li>
- </ul>
 
 </div>
 
