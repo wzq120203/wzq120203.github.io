@@ -7,7 +7,7 @@
 
     
 
-    <title>JavaScript实现ajax | myblog</title>
+    <title>HTML5简介(meta) | myblog</title>
     <meta name="author" content="promises">
     
     <meta name="description" content="坑">
@@ -15,7 +15,7 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <meta property="og:title" content="JavaScript实现ajax"/>
+    <meta property="og:title" content="HTML5简介(meta)"/>
     <meta property="og:site_name" content="当你坚持不住的时候，再坚持一下"/>
 
     
@@ -197,107 +197,22 @@
             <div class="article-title">
                 
     
-        <h1>JavaScript实现ajax</h1>
+        <h1>HTML5简介(meta)</h1>
     
 
 
             </div>
-            <time class="pink-link-context" datetime="2016-03-09T06:43:38.000Z"><a href="/2016/03/09/w/">2016-03-09</a></time>
+            <time class="pink-link-context" datetime="2015-08-12T12:11:10.000Z"><a href="/2015/08/12/HTML5简介-meta/">2015-08-12</a></time>
 
             
 
             <div class="toc pink-link-context hide-on-med-and-down">
-    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#JavaScript实现ajax"><span class="section table-of-contents-text">JavaScript实现ajax</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-5"><a class="section table-of-contents-link" href="#1-实例化一个XMLHttpRequest-对象，用于在后台与服务器交换数据"><span class="section table-of-contents-text">1.实例化一个XMLHttpRequest()对象，用于在后台与服务器交换数据;</span></a></li><li class="section table-of-contents-item section table-of-contents-level-5"><a class="section table-of-contents-link" href="#2-为了应对所有的现代浏览器，包括-IE5-、-IE6，检查浏览器是否支持-XMLHttpRequest-对象。如果支持，则创建-XMLHttpRequest-对象。如果不支持，则创建-ActiveXObject-："><span class="section table-of-contents-text">2.为了应对所有的现代浏览器，包括 IE5 、 IE6，检查浏览器是否支持 XMLHttpRequest 对象。如果支持，则创建 XMLHttpRequest 对象。如果不支持，则创建 ActiveXObject ：</span></a></li><li class="section table-of-contents-item section table-of-contents-level-5"><a class="section table-of-contents-link" href="#3-连接服务器"><span class="section table-of-contents-text">3.连接服务器</span></a></li><li class="section table-of-contents-item section table-of-contents-level-5"><a class="section table-of-contents-link" href="#4-发送请求"><span class="section table-of-contents-text">4.发送请求</span></a></li><li class="section table-of-contents-item section table-of-contents-level-5"><a class="section table-of-contents-link" href="#5-监听事件，接收服务器的返回"><span class="section table-of-contents-text">5.监听事件，接收服务器的返回</span></a></li></ol></li><li class="section table-of-contents-item section table-of-contents-level-4"><a class="section table-of-contents-link" href="#POST请求方式跟GET方式没有太大的区别，我直接上我封装的函数把！"><span class="section table-of-contents-text">POST请求方式跟GET方式没有太大的区别，我直接上我封装的函数把！</span></a></li></ol></li></ol>
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-4"><a class="section table-of-contents-link" href="#meta标签"><span class="section table-of-contents-text">meta标签</span></a></li></ol>
 </div>
 
 
             <div class="entry pink-link-context">
-                <h3 id="JavaScript实现ajax"><a href="#JavaScript实现ajax" class="headerlink" title="JavaScript实现ajax"></a>JavaScript实现ajax</h3><h5 id="1-实例化一个XMLHttpRequest-对象，用于在后台与服务器交换数据"><a href="#1-实例化一个XMLHttpRequest-对象，用于在后台与服务器交换数据" class="headerlink" title="1.实例化一个XMLHttpRequest()对象，用于在后台与服务器交换数据;"></a>1.实例化一个XMLHttpRequest()对象，用于在后台与服务器交换数据;</h5><pre><code>var request = new XMLHttpRequest();//IE7以下不兼容
-var requset=new ActiveXObject(&quot;Microsoft.XMLHTTP&quot;);//IE5、6
-</code></pre><h5 id="2-为了应对所有的现代浏览器，包括-IE5-、-IE6，检查浏览器是否支持-XMLHttpRequest-对象。如果支持，则创建-XMLHttpRequest-对象。如果不支持，则创建-ActiveXObject-："><a href="#2-为了应对所有的现代浏览器，包括-IE5-、-IE6，检查浏览器是否支持-XMLHttpRequest-对象。如果支持，则创建-XMLHttpRequest-对象。如果不支持，则创建-ActiveXObject-：" class="headerlink" title="2.为了应对所有的现代浏览器，包括 IE5 、 IE6，检查浏览器是否支持 XMLHttpRequest 对象。如果支持，则创建 XMLHttpRequest 对象。如果不支持，则创建 ActiveXObject ："></a>2.为了应对所有的现代浏览器，包括 IE5 、 IE6，检查浏览器是否支持 XMLHttpRequest 对象。如果支持，则创建 XMLHttpRequest 对象。如果不支持，则创建 ActiveXObject ：</h5><pre><code>if (window.XMLHttpRequest){
-      var requset=new XMLHttpRequest();
-  }else{    
-    var requset=new ActiveXObject(&quot;Microsoft.XMLHTTP&quot;);
-};
-</code></pre><h5 id="3-连接服务器"><a href="#3-连接服务器" class="headerlink" title="3.连接服务器"></a>3.连接服务器</h5><pre><code>request.open(&apos;GET&apos;,url,true);
-//第一个参数是方式（两种请求方式：GET、POST）这里是GET方式，第二个参数是请求文件的地址，第三个参数是是否异步，默认true(是)
-</code></pre><h5 id="4-发送请求"><a href="#4-发送请求" class="headerlink" title="4.发送请求"></a>4.发送请求</h5><pre><code>request.send();//GET方式
-</code></pre><h5 id="5-监听事件，接收服务器的返回"><a href="#5-监听事件，接收服务器的返回" class="headerlink" title="5.监听事件，接收服务器的返回"></a>5.监听事件，接收服务器的返回</h5><pre><code>requset.onreadystatechange=function(){
-
-      if(requset.readyState==4 &amp;&amp; requset.status==200){
-
-        document.getElementById(&quot;myDiv&quot;).innerHTML=requset.responseText;
-    }
-  };
-</code></pre><ul>
-<li>请求状态监控<ul>
-<li>onreadystatechange事件<ul>
-<li>readyState属性：请求状态</li>
-<li>0  （初始化）还没有调用open()方法</li>
-<li>1  （载入）已调用send()方法，正在发送请求</li>
-<li>2  （载入完成）send()方法完成，已收到全部响应内容</li>
-<li>3  （解析）正在解析响应内容</li>
-<li>4  （完成）响应内容解析完成，可以在客户端调用了</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>status属性：服务器(请求资源)的状态</li>
-<li>返回的内容<ul>
-<li>responseText：返回以文本形式存放的内容</li>
-<li>responseXML：返回XML形式的内容</li>
-</ul>
-</li>
-</ul>
-<p>requset.status==200代表成功，requset.status还有好多状态码<a href="http://baike.baidu.com/link?url=3yJ7CWWYuzk3U5SsSvLjswBqdcP6AT1PcH0dZH6oapmkHE_bOOgY0qh4PzfjnVKdOIyEG3EfFEJvl9RhjlYA2WH7hkxGI9AscvL531tbY52-V77ZYkcg0VEct0z2Uv0XMb_3vYXKV7xRaplt6eQTlq" target="_blank" rel="external">点击这里查看</a></p>
-<h4 id="POST请求方式跟GET方式没有太大的区别，我直接上我封装的函数把！"><a href="#POST请求方式跟GET方式没有太大的区别，我直接上我封装的函数把！" class="headerlink" title="POST请求方式跟GET方式没有太大的区别，我直接上我封装的函数把！"></a>POST请求方式跟GET方式没有太大的区别，我直接上我封装的函数把！</h4><pre><code> //POST请求
- function requestByPOST(url,postbody,successCallback,errorCallback){
-
-    if (window.XMLHttpRequest) {
-        var request = new XMLHttpRequest();
-    }else{
-        var request = new ActiveXObject(&quot;Microsoft.XMLHTTP&quot;);
-    }
-
-    request.open(&quot;POST&quot;,url,true);
-    request.setRequestHeader(&quot;content-type&quot;,&quot;application/x-www-form-urlencoded&quot;);
-    request.send(postbody);
-
-    request.onreadystatechange = function(){
-        if (request.readyState == 4 &amp;&amp; request.status == 200) {
-            if(successCallback){
-                successCallback(request.responseText);
-            }
-        }else if(request.readyState == 4 &amp;&amp; request.status != 200){
-            if (errorCallback) {
-                errorCallback(request.statusText);
-            }
-        }
-    }
-}
-
-//GET请求
-function requestByGet(url,successCallback,errorCallback) {
-    if (window.XMLHttpRequest){
-          var requset=new XMLHttpRequest();
-      }else{    
-        var requset=new ActiveXObject(&quot;Microsoft.XMLHTTP&quot;);
-    };
-    requset.open(&quot;GET&quot;,url,true);
-    requset.send();
-    requset.onreadystatechange=function () {
-        if (requset.readyState==4 &amp;&amp; requset.status==200){
-            if(successCallback){
-                successCallback(requset.responseText);
-            }
-        }else if(requset.readyState==4 &amp;&amp; requset.status!=200){
-                if (errorCallback) {
-                    errorCallback(requset.statusText);
-                }
-        }
-    };
-}
-</code></pre>
+                <h4 id="meta标签"><a href="#meta标签" class="headerlink" title="meta标签"></a>meta标签</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;!DOCTYPE html&gt;  &lt;!-- 使用 HTML5 doctype，不区分大小写 --&gt;</span><br><span class="line"></span><br><span class="line">&lt;html lang=&quot;zh-cmn-Hans&quot;&gt; &lt;!-- 更加标准的 lang 属性写法 http://zhi.hu/XyIa --&gt;</span><br><span class="line"></span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;!-- 声明文档使用的字符编码 --&gt;</span><br><span class="line">    &lt;meta charset=&apos;utf-8&apos;&gt;</span><br><span class="line">    &lt;!-- 优先使用 IE 最新版本和 Chrome --&gt;</span><br><span class="line">    </span><br><span class="line">    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge,chrome=1&quot;/&gt;</span><br><span class="line">    &lt;!-- 页面描述 --&gt;</span><br><span class="line">    &lt;meta name=&quot;description&quot; content=&quot;不超过150个字符&quot;/&gt;</span><br><span class="line">    &lt;!-- 页面关键词 --&gt;</span><br><span class="line">    &lt;meta name=&quot;keywords&quot; content=&quot;&quot;/&gt;</span><br><span class="line">    &lt;!-- 网页作者 --&gt;</span><br><span class="line">    &lt;meta name=&quot;author&quot; content=&quot;name, email@gmail.com&quot;/&gt;</span><br><span class="line">    &lt;!-- 搜索引擎抓取 --&gt;</span><br><span class="line">    &lt;meta name=&quot;robots&quot; content=&quot;index,follow&quot;/&gt;</span><br><span class="line">    &lt;!-- 为移动设备添加 viewport --&gt;</span><br><span class="line">    &lt;meta name=&quot;viewport&quot; content=&quot;initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no&quot;&gt;</span><br><span class="line">    &lt;!-- `width=device-width` 会导致 iPhone 5 添加到主屏后以 WebApp 全屏模式打开页面时出现黑边 http://bigc.at/ios-webapp-viewport-meta.orz --&gt;</span><br><span class="line"> </span><br><span class="line">    &lt;!-- iOS 设备 begin --&gt;</span><br><span class="line">    &lt;meta name=&quot;apple-mobile-web-app-title&quot; content=&quot;标题&quot;&gt;</span><br><span class="line">    &lt;!-- 添加到主屏后的标题（iOS 6 新增） --&gt;</span><br><span class="line">    &lt;meta name=&quot;apple-mobile-web-app-capable&quot; content=&quot;yes&quot;/&gt;</span><br><span class="line">    &lt;!-- 是否启用 WebApp 全屏模式，删除苹果默认的工具栏和菜单栏 --&gt;</span><br><span class="line"> </span><br><span class="line">    &lt;meta name=&quot;apple-itunes-app&quot; content=&quot;app-id=myAppStoreID, affiliate-data=myAffiliateData, app-argument=myURL&quot;&gt;</span><br><span class="line">    &lt;!-- 添加智能 App 广告条 Smart App Banner（iOS 6+ Safari） --&gt;</span><br><span class="line">    &lt;meta name=&quot;apple-mobile-web-app-status-bar-style&quot; content=&quot;black&quot;/&gt;</span><br><span class="line">    &lt;!-- 设置苹果工具栏颜色 --&gt;</span><br><span class="line">    &lt;meta name=&quot;format-detection&quot; content=&quot;telphone=no, email=no&quot;/&gt;</span><br><span class="line">    &lt;!-- 忽略页面中的数字识别为电话，忽略email识别 --&gt;</span><br><span class="line">    &lt;!-- 启用360浏览器的极速模式(webkit) --&gt;</span><br><span class="line">    &lt;meta name=&quot;renderer&quot; content=&quot;webkit&quot;&gt;</span><br><span class="line">    &lt;!-- 避免IE使用兼容模式 --&gt;</span><br><span class="line">    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;</span><br><span class="line">    &lt;!-- 不让百度转码 --&gt;</span><br><span class="line">    &lt;meta http-equiv=&quot;Cache-Control&quot; content=&quot;no-siteapp&quot; /&gt;</span><br><span class="line">    &lt;!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 --&gt;</span><br><span class="line">    &lt;meta name=&quot;HandheldFriendly&quot; content=&quot;true&quot;&gt;</span><br><span class="line">    &lt;!-- 微软的老式浏览器 --&gt;</span><br><span class="line">    &lt;meta name=&quot;MobileOptimized&quot; content=&quot;320&quot;&gt;</span><br><span class="line">    &lt;!-- uc强制竖屏 --&gt;</span><br><span class="line">    &lt;meta name=&quot;screen-orientation&quot; content=&quot;portrait&quot;&gt;</span><br><span class="line">    &lt;!-- QQ强制竖屏 --&gt;</span><br><span class="line">    &lt;meta name=&quot;x5-orientation&quot; content=&quot;portrait&quot;&gt;</span><br><span class="line">    &lt;!-- UC强制全屏 --&gt;</span><br><span class="line">    &lt;meta name=&quot;full-screen&quot; content=&quot;yes&quot;&gt;</span><br><span class="line">    &lt;!-- QQ强制全屏 --&gt;</span><br><span class="line">    &lt;meta name=&quot;x5-fullscreen&quot; content=&quot;true&quot;&gt;</span><br><span class="line">    &lt;!-- UC应用模式 --&gt;</span><br><span class="line">    &lt;meta name=&quot;browsermode&quot; content=&quot;application&quot;&gt;</span><br><span class="line">    &lt;!-- QQ应用模式 --&gt;</span><br><span class="line">    &lt;meta name=&quot;x5-page-mode&quot; content=&quot;app&quot;&gt;</span><br><span class="line">    &lt;!-- windows phone 点击无高光 --&gt;</span><br><span class="line">    &lt;meta name=&quot;msapplication-tap-highlight&quot; content=&quot;no&quot;&gt;</span><br><span class="line">    &lt;!-- iOS 图标 begin --&gt;</span><br><span class="line">    &lt;link rel=&quot;apple-touch-icon-precomposed&quot; href=&quot;/apple-touch-icon-57x57-precomposed.png&quot;/&gt;</span><br><span class="line">    &lt;!-- iPhone 和 iTouch，默认 57x57 像素，必须有 --&gt;</span><br><span class="line">    &lt;link rel=&quot;apple-touch-icon-precomposed&quot; sizes=&quot;114x114&quot; href=&quot;/apple-touch-icon-114x114-precomposed.png&quot;/&gt;</span><br><span class="line">    &lt;!-- Retina iPhone 和 Retina iTouch，114x114 像素，可以没有，但推荐有 --&gt;</span><br><span class="line">    &lt;link rel=&quot;apple-touch-icon-precomposed&quot; sizes=&quot;144x144&quot; href=&quot;/apple-touch-icon-144x144-precomposed.png&quot;/&gt;</span><br><span class="line">    &lt;!-- Retina iPad，144x144 像素，可以没有，但推荐有 --&gt;</span><br><span class="line">    &lt;!-- iOS 图标 end --&gt;</span><br><span class="line"> </span><br><span class="line">    &lt;!-- iOS 启动画面 begin --&gt;</span><br><span class="line">    &lt;link rel=&quot;apple-touch-startup-image&quot; sizes=&quot;768x1004&quot; href=&quot;/splash-screen-768x1004.png&quot;/&gt;</span><br><span class="line">    &lt;!-- iPad 竖屏 768 x 1004（标准分辨率） --&gt;</span><br><span class="line">    &lt;link rel=&quot;apple-touch-startup-image&quot; sizes=&quot;1536x2008&quot; href=&quot;/splash-screen-1536x2008.png&quot;/&gt;</span><br><span class="line">    &lt;!-- iPad 竖屏 1536x2008（Retina） --&gt;</span><br><span class="line">    &lt;link rel=&quot;apple-touch-startup-image&quot; sizes=&quot;1024x748&quot; href=&quot;/Default-Portrait-1024x748.png&quot;/&gt;</span><br><span class="line">    &lt;!-- iPad 横屏 1024x748（标准分辨率） --&gt;</span><br><span class="line">    &lt;link rel=&quot;apple-touch-startup-image&quot; sizes=&quot;2048x1496&quot; href=&quot;/splash-screen-2048x1496.png&quot;/&gt;</span><br><span class="line">    &lt;!-- iPad 横屏 2048x1496（Retina） --&gt;</span><br><span class="line"> </span><br><span class="line">    &lt;link rel=&quot;apple-touch-startup-image&quot; href=&quot;/splash-screen-320x480.png&quot;/&gt;</span><br><span class="line">    &lt;!-- iPhone/iPod Touch 竖屏 320x480 (标准分辨率) --&gt;</span><br><span class="line">    &lt;link rel=&quot;apple-touch-startup-image&quot; sizes=&quot;640x960&quot; href=&quot;/splash-screen-640x960.png&quot;/&gt;</span><br><span class="line">    &lt;!-- iPhone/iPod Touch 竖屏 640x960 (Retina) --&gt;</span><br><span class="line">    &lt;link rel=&quot;apple-touch-startup-image&quot; sizes=&quot;640x1136&quot; href=&quot;/splash-screen-640x1136.png&quot;/&gt;</span><br><span class="line">    &lt;!-- iPhone 5/iPod Touch 5 竖屏 640x1136 (Retina) --&gt;</span><br><span class="line">    &lt;!-- iOS 启动画面 end --&gt;</span><br><span class="line"> </span><br><span class="line">    &lt;!-- iOS 设备 end --&gt;</span><br><span class="line">    &lt;meta name=&quot;msapplication-TileColor&quot; content=&quot;#000&quot;/&gt;</span><br><span class="line">    &lt;!-- Windows 8 磁贴颜色 --&gt;</span><br><span class="line">    &lt;meta name=&quot;msapplication-TileImage&quot; content=&quot;icon.png&quot;/&gt;</span><br><span class="line">    &lt;!-- Windows 8 磁贴图标 --&gt;</span><br><span class="line"> </span><br><span class="line">    &lt;link rel=&quot;alternate&quot; type=&quot;application/rss+xml&quot; title=&quot;RSS&quot; href=&quot;/rss.xml&quot;/&gt;</span><br><span class="line">    &lt;!-- 添加 RSS 订阅 --&gt;</span><br><span class="line">    &lt;link rel=&quot;shortcut icon&quot; type=&quot;image/ico&quot; href=&quot;/favicon.ico&quot;/&gt;</span><br><span class="line">    &lt;!-- 添加 favicon icon --&gt;</span><br><span class="line"></span><br><span class="line">    &lt;!-- sns 社交标签 begin --&gt;</span><br><span class="line">    &lt;!-- 参考微博API --&gt;</span><br><span class="line">    &lt;meta property=&quot;og:type&quot; content=&quot;类型&quot; /&gt;</span><br><span class="line">    &lt;meta property=&quot;og:url&quot; content=&quot;URL地址&quot; /&gt;</span><br><span class="line">    &lt;meta property=&quot;og:title&quot; content=&quot;标题&quot; /&gt;</span><br><span class="line">    &lt;meta property=&quot;og:image&quot; content=&quot;图片&quot; /&gt;</span><br><span class="line">    &lt;meta property=&quot;og:description&quot; content=&quot;描述&quot; /&gt;</span><br><span class="line">    &lt;!-- sns 社交标签 end --&gt;</span><br><span class="line"></span><br><span class="line">    &lt;title&gt;标题&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br></pre></td></tr></table></figure>
             </div>
         </div>
     </div>
@@ -310,7 +225,7 @@ function requestByGet(url,successCallback,errorCallback) {
         <div class="card">
             <div class="card-content">
                 <!-- Duoshuo Comment BEGIN -->
-                <div class="ds-thread" data-thread-key="2016/03/09/w/" data-title="JavaScript实现ajax" data-url="http://yoursite.com/2016/03/09/w/"></div>
+                <div class="ds-thread" data-thread-key="2015/08/12/HTML5简介-meta/" data-title="HTML5简介(meta)" data-url="http://yoursite.com/2015/08/12/HTML5简介-meta/"></div>
 
                 <script type="text/javascript">
                     console.log(document.querySelector('.ds-thread'));
